@@ -33,37 +33,37 @@ app.partial.spa = function(){
 			$('html').removeClass('loading-done');
 		}
 
-		$.ajax({
+		$.get(
 			url: uri == '/' ? rootPath : rootPath + uri
-		}).done(function(response){
-			var title = title;
-			var htmlContent = '';
-			$(response).each(function(i, element){
-				if($(element).attr('property') === 'og:title'){
-					title = $(element).attr('content');
+			, function(response){
+				var title = title;
+				var htmlContent = '';
+				$(response).each(function(i, element){
+					if($(element).attr('property') === 'og:title'){
+						title = $(element).attr('content');
+					}
+					if($(element).attr('role') === 'container'){
+							// console.log($('[role=content]', element));
+						htmlContent = $('[role=content]', element);
+					}
+					if($(element).attr('role') === 'menu'){
+						$('.menu a', element).each(function(i){
+							$('[role=menu]').eq(i).attr('data-href', $(this).attr('data-href'));
+						});
+					}
+				});
+				if(!isPopstate){
+					pushState({uri: uri, name: name, menu: menu, title: title}, 'update content' + uri);
 				}
-				if($(element).attr('role') === 'container'){
-						// console.log($('[role=content]', element));
-					htmlContent = $('[role=content]', element);
-				}
-				if($(element).attr('role') === 'menu'){
-					$('.menu a', element).each(function(i){
-						$('[role=menu]').eq(i).attr('data-href', $(this).attr('data-href'));
-					});
-				}
-			});
-			if(!isPopstate){
-				pushState({uri: uri, name: name, menu: menu, title: title}, 'update content' + uri);
-			}
 
-			container.html(htmlContent);
+				container.html(htmlContent);
 
-			(callback || function(){})();
+				(callback || function(){})();
 
-			container.trigger('page:update:' + name, menu);
-			container.trigger('page:update', menu);
+				container.trigger('page:update:' + name, menu);
+				container.trigger('page:update', menu);
 
-			app.imageReload.refresh();
+				app.imageReload.refresh();
 		});
 	}
 

@@ -183,7 +183,7 @@ app.partial.home = function(){
 			}else{			
 				$('.home article .text').mCustomScrollbar('destroy');
 			}
-			console.log('resize');
+			// console.log('resize');
 
 		});
 
