@@ -38,6 +38,12 @@ header {
 					width: 0;
 				}
 			}
+
+			&[disabled]{
+				opacity: 0.3;
+				pointer-events: none;
+				text-decoration: line-through;
+			}
 		}
 	}
 
