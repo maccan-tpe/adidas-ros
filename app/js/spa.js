@@ -8,10 +8,10 @@
 app.partial.spa = function(){
 
 	// 網址為 gulp 或者 github 時 設定成debug 模式
-	var debug = /localhost[:]9000|github.io/.test(location.href);
-	var github = /nelson.works/.test(location.href);
+	var debug = /localhost[:]9000|github\.io/.test(location.href);
+	var github = /maccan-tpe\.github\.io\/adidas-ros\//.test(location.href);
 	var stage = /staging/.test(location.href);
-	var rootPath = github ? '/' : '/';
+	var rootPath = github ? 'https://maccan-tpe.github.io/adidas-ros/' : '/';
 	rootPath = stage ? '/staging/' : rootPath;
 
 
@@ -33,7 +33,7 @@ app.partial.spa = function(){
 			$('html').removeClass('loading-done');
 		}
 
-		$.get(uri, function(response){
+		$.get(rootPath + uri, function(response){
 			var title = title;
 			var htmlContent = '';
 			$(response).each(function(i, element){
