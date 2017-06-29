@@ -4,7 +4,7 @@
 	no-mixed-spaces-and-tabs, no-multi-spaces, camelcase, no-loop-func,no-empty,
 	key-spacing ,curly, no-shadow, no-return-assign, no-redeclare, no-unused-vars,
 	eqeqeq, no-extend-native, quotes , no-inner-declarations*/
-/*global  $ */
+/*global  $, anime */
 var app = {};
 app.partial = {};
 
@@ -27,8 +27,7 @@ $(function(){
 		var loadingDone = anime.timeline({
 			// direction: 'forwards',
 			loop: true,
-			delay: 500,
-
+			delay: 500
 		});
 		loadingDone.add({
 			targets: 'html',
@@ -60,7 +59,9 @@ $(function(){
 					duration: 100
 				},
 				fill: '#fff',
-				delay: function(el, i){ return 0 + (i * 75)},
+				delay: function(el, i){ 
+					return 0 + (i * 75); 
+				},
 				duration: 5000,
 				easing: 'easeOutExpo',
 				offset: 0
@@ -73,7 +74,9 @@ $(function(){
 					duration: 100
 				},
 				fill: '#fff',
-				delay: function(el, i){ return 0 + (i * 75)},
+				delay: function(el, i){ 
+					return 0 + (i * 75); 
+				},
 				duration: 1000,
 				easing: 'easeOutExpo',
 				offset: 0

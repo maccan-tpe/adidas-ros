@@ -4,7 +4,7 @@
 	no-mixed-spaces-and-tabs, no-multi-spaces, camelcase, no-loop-func,no-empty,
 	key-spacing ,curly, no-shadow, no-return-assign, no-redeclare, no-unused-vars,
 	eqeqeq, no-extend-native, quotes , no-inner-declarations*/
-/*global app, $ */
+/*global app, $, anime */
 app.partial.rule = function(){
 
 
@@ -14,12 +14,12 @@ app.partial.rule = function(){
 			e.stopPropagation();
 			e.preventDefault();
 
-			var _vw = $(window).width();
-			var _vh = $(window).height();
+			var vw = $(window).width();
+			var vh = $(window).height();
 			anime({
 				targets: 'background',
 				height: function(){
-					return _vh;
+					return vh;
 				},
 				duration: 800,
 				easing: 'easeInOutExpo'

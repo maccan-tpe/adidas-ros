@@ -50,7 +50,7 @@ gulp.task('html', ['css', 'js', 'components'], () => {
   // gulp.src('app/CNAME').pipe(gulp.dest('dist'));
   return gulp.src('app/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
-    .pipe($.if(/\.js$/, $.uglify()))
+    // .pipe($.if(/\.js$/, $.uglify()))
     .pipe($.if(/\.css$/, $.cssnano()))
     // .pipe($.if(/\.css$/, $.debug()))
     .pipe($.if(/\.html$/, $.htmlmin({collapseWhitespace: true})))
@@ -65,7 +65,7 @@ gulp.task('components', () => {
     // .pipe($.debug())
     .pipe($.if(/\.css$/, $.cssnano()))
     .pipe($.if(/\.css$/, gulp.dest('./dist/components')))
-    .pipe($.if(/\.js$/, $.uglify()))
+    // .pipe($.if(/\.js$/, $.uglify()))
     .pipe($.if(/\.js$/, gulp.dest('./dist/components')))
     .pipe($.if(/\.html$/, $.htmlmin({collapseWhitespace: true})))
     .pipe($.if(/\.html$/, gulp.dest('dist')))

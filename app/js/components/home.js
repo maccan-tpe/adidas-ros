@@ -4,7 +4,7 @@
 	no-mixed-spaces-and-tabs, no-multi-spaces, camelcase, no-loop-func,no-empty,
 	key-spacing ,curly, no-shadow, no-return-assign, no-redeclare, no-unused-vars,
 	eqeqeq, no-extend-native, quotes , no-inner-declarations*/
-/*global app, $ */
+/*global app, $, anime, Parallax */
 app.partial.home = function(){
 	var container = $('#container');
 	container.on('page:update:home' , function(page, menu){
@@ -15,27 +15,27 @@ app.partial.home = function(){
 		
 		var fullpageSections = ['kv', 'lin', 'chen', 'lu'];
 		$('#content').on('resizeend', 500, function(e){
-			
+
 			e.stopPropagation();
 			e.preventDefault();
 
-			var _vw = $(window).width();
-			var _vh = $(window).height();
+			var vw = $(window).width();
+			var vh = $(window).height();
 			anime({
 				targets: '.kv.active',
 				height: function(){
 
 					anime({
 						targets: '.kv.active .visual',
-						height: (_vw * 1080 / 1920),
-						top: (_vh - (_vw * 1080 / 1920)),
+						height: (vw * 1080 / 1920),
+						top: (vh - (vw * 1080 / 1920)),
 						paddingTop: 0,
 						duration: 1200,
 						easing: 'easeOutExpo'
 					});
 					anime({
 						targets: '.kv.active .here-to-create, .kv.active a.cfa, .kv.active .cfa-bg',
-						top: (_vh - (_vw * 1080 / 1920)),
+						top: (vh - (vw * 1080 / 1920)),
 						duration: 1200
 					});
 					anime({
@@ -50,7 +50,7 @@ app.partial.home = function(){
 						opacity: 0,
 						easing: 'easeInOutExpo'
 					});
-					return _vh;
+					return vh;
 				},
 				duration: 800,
 				easing: 'easeInOutExpo'
@@ -69,8 +69,8 @@ app.partial.home = function(){
 					anime({
 						targets: '#content article.lin .text',
 						height: function(e, i){
-							var _top = $(e).offset().top;
-							return _vh>$(e).offset().top?(_vh-_top-150):(_vh-(_top-_vh)-150);
+							var top = $(e).offset().top;
+							return vh>$(e).offset().top?(vh-top-150):(vh-(top-vh)-150);
 						},
 						paddingTop: 0,
 						duration: 800,
@@ -79,8 +79,8 @@ app.partial.home = function(){
 					anime({
 						targets: '#content article.lin a.cfa',
 						marginTop: function(e, i){
-							var _top = $(e).prev().offset().top;
-							return _vh>$(e).prev().offset().top?(_vh-_top-150):(_vh-(_top-_vh)-150);
+							var top = $(e).prev().offset().top;
+							return vh>$(e).prev().offset().top?(vh-top-150):(vh-(top-vh)-150);
 						},
 						paddingTop: 0,
 						easing: 'easeInOutExpo'
@@ -90,7 +90,7 @@ app.partial.home = function(){
 						opacity: 0,
 						easing: 'easeInOutExpo'
 					});
-					return _vh;
+					return vh;
 				},
 				duration: 800,
 				easing: 'easeInOutExpo'
@@ -109,8 +109,8 @@ app.partial.home = function(){
 					anime({
 						targets: '#content article.chen .text',
 						height: function(e, i){
-							var _top = $(e).offset().top;
-							return _vh>$(e).offset().top?(_vh-_top-150):(_vh-(_top-_vh)-150);
+							var top = $(e).offset().top;
+							return vh>$(e).offset().top?(vh-top-150):(vh-(top-vh)-150);
 						},
 						paddingTop: 0,
 						duration: 800,
@@ -119,8 +119,8 @@ app.partial.home = function(){
 					anime({
 						targets: '#content article.chen a.cfa',
 						marginTop: function(e, i){
-							var _top = $(e).prev().offset().top;
-							return _vh>$(e).prev().offset().top?(_vh-_top-150):(_vh-(_top-_vh)-150);
+							var top = $(e).prev().offset().top;
+							return vh>$(e).prev().offset().top?(vh-top-150):(vh-(top-vh)-150);
 						},
 						paddingTop: 0,
 						easing: 'easeInOutExpo'
@@ -130,7 +130,7 @@ app.partial.home = function(){
 						opacity: 0,
 						easing: 'easeInOutExpo'
 					});
-					return _vh;
+					return vh;
 				},
 				duration: 800,
 				easing: 'easeInOutExpo'
@@ -149,8 +149,8 @@ app.partial.home = function(){
 					anime({
 						targets: '#content article.lu .text',
 						height: function(e, i){
-							var _top = $(e).offset().top;
-							return _vh>$(e).offset().top?(_vh-_top-150):(_vh-(_top-_vh)-150);
+							var top = $(e).offset().top;
+							return vh>$(e).offset().top?(vh-top-150):(vh-(top-vh)-150);
 						},
 						paddingTop: 0,
 						duration: 800,
@@ -159,8 +159,8 @@ app.partial.home = function(){
 					anime({
 						targets: '#content article.lu a.cfa',
 						marginTop: function(e, i){
-							var _top = $(e).prev().offset().top;
-							return _vh>$(e).prev().offset().top?(_vh-_top-150):(_vh-(_top-_vh)-150);
+							var top = $(e).prev().offset().top;
+							return vh>$(e).prev().offset().top?(vh-top-150):(vh-(top-vh)-150);
 						},
 						paddingTop: 0,
 						easing: 'easeInOutExpo'
@@ -170,7 +170,7 @@ app.partial.home = function(){
 						opacity: 1,
 						easing: 'easeInOutExpo'
 					});
-					return _vh;
+					return vh;
 				},
 				duration: 800,
 				easing: 'easeInOutExpo'
