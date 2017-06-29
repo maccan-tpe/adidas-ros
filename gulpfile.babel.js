@@ -51,9 +51,9 @@ gulp.task('html', ['css', 'js', 'components'], () => {
   return gulp.src('app/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     // .pipe($.if(/\.js$/, $.uglify()))
-    .pipe($.if(/\.css$/, $.cssnano()))
+    // .pipe($.if(/\.css$/, $.cssnano()))
     // .pipe($.if(/\.css$/, $.debug()))
-    .pipe($.if(/\.html$/, $.htmlmin({collapseWhitespace: true})))
+    // .pipe($.if(/\.html$/, $.htmlmin({collapseWhitespace: true})))
     // .pipe($.debug())
     .pipe(gulp.dest('dist'));
 });
@@ -63,11 +63,11 @@ gulp.task('components', () => {
   gulp.src(['app/**/*.html', '!app/index.html'])
     .pipe($.useref({searchPath: ['', '.tmp', 'app/**']}))
     // .pipe($.debug())
-    .pipe($.if(/\.css$/, $.cssnano()))
+    // .pipe($.if(/\.css$/, $.cssnano()))
     .pipe($.if(/\.css$/, gulp.dest('./dist/components')))
     // .pipe($.if(/\.js$/, $.uglify()))
     .pipe($.if(/\.js$/, gulp.dest('./dist/components')))
-    .pipe($.if(/\.html$/, $.htmlmin({collapseWhitespace: true})))
+    // .pipe($.if(/\.html$/, $.htmlmin({collapseWhitespace: true})))
     .pipe($.if(/\.html$/, gulp.dest('dist')))
 });
 
