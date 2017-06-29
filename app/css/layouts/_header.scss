@@ -1,0 +1,66 @@
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 75px;
+	z-index: 10;
+	line-height: 75px;
+	// border-bottom: 1px solid #444;
+	.menu{
+		// @include Item('auto', 'auto', 0, 90, 'auto', 'auto', 1920, 'fit', 'relative');
+		position: absolute;
+		right: 90px;
+		top: 0;
+		letter-spacing: 45px;
+		a{
+			letter-spacing: 1px;
+			letter-spacing: 0.1px;
+			position: relative;
+			&:after{
+				position: absolute;
+				border-top: 4px solid #e1004a;
+				width: 0%;
+				top: -10px;
+				left: 100%;
+				left: calc(100% + 45px);
+				content: '';
+				transition-duration: 0.2s;
+			}
+			&.active{
+				&:after{
+					left: 0;
+					width: 100%;
+				}
+
+				&~ a:after{
+					left: -45px;
+					width: 0;
+				}
+			}
+		}
+	}
+
+	.logo{
+		a{
+			display: block;
+			@include Item(75, 50, 20, 'auto', 'auto', 30, 1920, 'none', 'absolute');
+			img{
+				@include SubItem();
+			}
+		}
+		font-size: em(11,14);
+		font-size: 0.01em;
+	}
+	.fb{
+		display: block;
+		@include Item(8, 17, 30, 37, 'auto', 'auto', 1920, 'none', 'absolute');
+		img{
+			@include SubItem();
+		}
+	}
+	.background{
+		@include SubItem();
+		opacity: 0;
+	}
+}

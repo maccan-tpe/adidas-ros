@@ -1,0 +1,197 @@
+.home{
+	.kv{
+		overflow: hidden;
+		@include Item(1920, 0, 0, 'auto', 'auto', 0, 1920, 'fit', 'relative');
+		position: relative;
+		.visual,.background,.shadow{
+			@include SubItem();
+		}
+		.shadow{
+			background-size: cover;
+			background-position: center;
+		}
+		.visual{
+			@include Item(1920, 1080, 'auto', 'auto', 0, 0, 1920, 'fit', 'relative');
+			background-size: 100% auto;
+			background-position: center bottom;
+			background-repeat: no-repeat;
+		}
+		.here-to-create{
+			@include Item(429, 371, 217, 'auto', 'auto', 157, 1920, 'fit', 'absolute');
+			z-index: 0;
+			img{
+				@include SubItem();
+			}
+		}
+		.cfa-bg{
+			@include Item(536, 355, 511, 'auto', 'auto', 229, 1920, 'fit', 'absolute');
+			background-position: center;
+			background-size: cover;
+			z-index: 1;
+			opacity: 0.95;
+			transform: rotateZ(1deg) scale(0.99);
+			transition-duration: 2s;
+			img{
+				transform: rotateZ(0deg) scale(0.8);
+				@include SubItem();
+				-webkit-mask: url(../img/urban-sprite.png);
+						mask: url(../img/urban-sprite.png);
+				-webkit-mask-size: 3000% 100%;
+						mask-size: 3000% 100%;
+				-webkit-animation: mask-play 3s steps(29) forwards;
+						animation: mask-play 3s steps(29) forwards;
+
+			}
+		}
+		a.cfa{
+			@include Item(508, 130, 616, 'auto', 'auto', 173, 1920, 'fit', 'absolute');
+			.adidas-sport-base{
+				@include Item(129, 130, 0, 'auto', 'auto', 0, 508, 'fit', 'absolute');
+				img{
+					@include SubItem();
+				}
+
+			}
+			.cfa{
+				@include Item(375, 64, 25, 'auto', 'auto', 133, 508, 'fit', 'absolute');
+				img{
+					@include SubItem();
+				}
+			}
+			&:hover ~.cfa-bg{
+				transition-duration: 2s;
+				opacity: 1;
+				transform: rotateZ(0deg);
+				img{
+				-webkit-animation: mask-replay 3s steps(29) forwards;
+						animation: mask-replay 3s steps(29) forwards;
+				}
+			}
+		}
+
+		.scroll{
+			@include Item(1920, 131, 'auto', 'auto', 0, 0, 1920, 'fit', 'absolute');
+			background-position: center;
+			background-size: auto 100%;
+			background-repeat: no-repeat;
+		}
+	}
+	.lin, .lu, .chen{
+		overflow: hidden;
+		@include Item(1920, 1200, 0, 'auto', 'auto', 0, 1920, 'fit', 'relative');
+		.background{
+			@include SubItem();
+			background-position: center;
+			background-size: cover;
+		}
+		.parallax{
+			@include SubItem();
+			.pic-1{
+				@include Item(515, 511, 248, 'auto', 'auto', 1386, 1920, 'fit', 'absolute');
+			}
+			.pic-2{
+				@include Item(358, 285, 751, 'auto', 'auto', 1390, 1920, 'fit', 'absolute');
+			}
+			.pic-1,.pic-2{
+				figure{
+					@include SubItem();
+					background-position: center;
+					background-size: cover;
+				}
+			}
+			.headline{
+				@include Item(700, 0, 138, 'auto', 'auto', 800, 1920, 'fit', 'absolute');
+				ul{
+					@include Item(599, 0, 200, 'auto', 'auto', 130, 700, 'fit', 'absolute');
+					height: auto;
+					color: #ff0054;
+				}
+				h3{
+					@include Item(599, 137, 9, 'auto', 'auto', 0, 700, 'fit', 'absolute');
+					img{
+						@include SubItem();
+					}
+				}
+			}
+			article{
+				ul{
+					color: #ff0054;
+					margin: per(60,700) 0 per(50,700) per(110,700);
+				}
+			}
+		}
+		a.cfa{
+			@include Item(508, 130, 616, 'auto', 'auto', 0, 570, 'fit', 'absolute');
+			.adidas-sport-base{
+				@include Item(129, 130, 0, 'auto', 'auto', 0, 508, 'fit', 'absolute');
+				img{
+					@include SubItem();
+				}
+
+			}
+			.cfa{
+				@include Item(375, 64, 25, 'auto', 'auto', 133, 508, 'fit', 'absolute');
+				img{
+					@include SubItem();
+				}
+			}
+		}
+		&.chen{
+			.parallax{
+				@include SubItem();
+				.pic-1{
+					margin-left: per(57, 1920);
+				}
+				.pic-2{
+					margin-left: per(80, 1920);
+				}
+				.pic-1,.pic-2{
+					figure{
+						@include SubItem();
+						background-position: center;
+						background-size: cover;
+					}
+				}
+				.headline{
+					margin-left: per(386, 1920);
+				}
+			}
+			.viewport{
+				margin-left: per(508, 1920);
+			}
+
+		}
+	}
+	.viewport{
+		-webkit-backface-visibility: hidden;
+		@include Item(570, 0, 510, 'auto', 'auto', 930, 1920, 'fit', 'relative');
+		.text{
+			@include SubItem();
+			.bold{
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+@include keyframes ( mask-play ){
+	from {
+	-webkit-mask-position: 0% 0;
+			mask-position: 0% 0;
+	}
+	to {
+	-webkit-mask-position: 100% 0;
+			mask-position: 100% 0;
+	}
+}
+
+@include keyframes ( mask-replay ){
+	from {
+	-webkit-mask-position: 100% 0;
+			mask-position: 100% 0;
+	}
+	to {
+	-webkit-mask-position: 0% 0;
+			mask-position: 0% 0;
+	}
+}
