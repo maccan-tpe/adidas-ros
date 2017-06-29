@@ -33,7 +33,9 @@ app.partial.spa = function(){
 			$('html').removeClass('loading-done');
 		}
 
-		$.get(uri == '/' ? rootPath : rootPath + uri, function(response){
+		$.ajax({
+			url: uri == '/' ? rootPath : rootPath + uri
+		}).done(function(response){
 			var title = title;
 			var htmlContent = '';
 			$(response).each(function(i, element){
