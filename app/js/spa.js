@@ -34,7 +34,7 @@ app.partial.spa = function(){
 		}
 
 		$.get(
-			url: uri == '/' ? rootPath : rootPath + uri
+			url: uri
 			, function(response){
 				var title = title;
 				var htmlContent = '';
