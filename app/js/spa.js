@@ -47,7 +47,7 @@ app.partial.spa = function(){
 					if($(element).attr('role') === 'menu'){
 						$('.menu a', element).each(function(i){
 							console.log($(this));
-							$('[role=menu]').eq(i).attr('data-href', $(this).attr('data-href'));
+							$('[role=menu] a').eq(i).attr('data-href', $(this).attr('data-href'));
 						});
 					}
 				});
