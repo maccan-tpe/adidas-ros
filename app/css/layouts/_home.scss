@@ -241,7 +241,7 @@
 			}
 		}
 		&.chen{
-			@include Item(1920, 1238, 0, 0, 0, 0, 1920, 'fit', 'relative');
+			@include Item(1920, 1238, -1, 0, 0, 0, 1920, 'fit', 'relative');
 			@media screen and (max-width: #{$screen-xs - 1}) {
 				@include Item(750, 2628, -79, 0, 0, 0, 750,'fit','relative');
 				.pic-1{
