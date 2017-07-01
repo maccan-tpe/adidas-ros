@@ -242,27 +242,6 @@
 		}
 		&.chen{
 			@include Item(1920, 1353, -156, 0, 0, 0, 1920, 'fit', 'relative');
-			@media screen and (max-width: #{$screen-xs - 1}) {
-				@include Item(750, 2628, -79, 0, 0, 0, 750,'fit','relative');
-				.pic-1{
-					@include Item(515, 511, 991, 378, 0, 'auto', 750,'fit','absolute');
-				}
-				.pic-2{
-					@include Item(358, 285, 2169, 0, 0, 429, 750,'fit','absolute');
-				}
-				.viewport{
-					.text{
-						@include Item(643, 0, 1307, 0, 0, 50, 750,'fit','absolute');
-						height: auto;
-					}
-				}
-				.headline{
-					ul, .text{
-						@include Item(694, 0, 631, 0, 0, 0, 750,'fit','absolute');
-						height: auto;
-					}
-				}
-			}
 			@media screen and (min-width: #{$screen-xs}) {
 				.parallax{
 					@include SubItem();
@@ -301,6 +280,27 @@
 				.text{
 					@media screen and (max-width: #{$screen-xs - 1}) {
 						@include Item(643, 0, 1137, 0, 0, 50, 750,'fit','absolute');
+						height: auto;
+					}
+				}
+			}
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				@include Item(750, 2628, -79, 0, 0, 0, 750,'fit','relative');
+				.pic-1{
+					@include Item(515, 511, 991, 378, 0, 'auto', 750,'fit','absolute');
+				}
+				.pic-2{
+					@include Item(358, 285, 2169, 0, 0, 429, 750,'fit','absolute');
+				}
+				.viewport{
+					.text{
+						@include Item(643, 0, 1307, 0, 0, 50, 750,'fit','absolute');
+						height: auto;
+					}
+				}
+				.headline{
+					ul, .text{
+						@include Item(694, 0, 631, 0, 0, 0, 750,'fit','absolute');
 						height: auto;
 					}
 				}
