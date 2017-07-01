@@ -14,10 +14,12 @@
 				background-position: center;
 			}
 		}
+
 		.shadow{
 			background-size: cover;
 			background-position: center;
 		}
+
 		.visual{
 			@include Item(1920, 1080, 0, 'auto', 'auto', 0, 1920, 'fit', 'absolute');
 			background-size: 100% auto;
@@ -27,16 +29,20 @@
 				@include SubItem();
 			}
 		}
+
 		.here-to-create{
 			@include Item(429, 371, 217, 0, 0, 157, 1920, 'fit', 'absolute');
 			@media screen and (max-width: #{$screen-xs - 1}) {
 				@include Item(389, 335, 103, 0, 0, 117, 750,'fit','absolute');
+				margin-top: 13vh;
+				margin-top: calc(30vh - 25vw);
 			}
 			z-index: 0;
 			img{
 				@include SubImgW();
 			}
 		}
+
 		.cfa-bg{
 			@include Item(536, 355, 511, 0, 0, 229, 1920, 'fit', 'absolute');
 			background-position: center;
@@ -57,6 +63,7 @@
 
 			}
 		}
+
 		a.cfa{
 			@include Item(508, 130, 616, 0, 0, 173, 1920, 'fit', 'absolute');
 			@media screen and (max-width: #{$screen-xs - 1}) {
@@ -109,6 +116,7 @@
 			}
 		}
 	}
+
 	.lin, .lu, .chen{
 		overflow: hidden;
 		@include Item(1920, 1200, 0, 0, 0, 0, 1920, 'fit', 'relative');
@@ -144,7 +152,7 @@
 					@include Item(750, 0, 0, 0, 0, 0, 750,'fit','relative');
 				}
 				ul, .text{
-					@include Item(599, 0, 200, 0, 0, 130, 700, 'fit', 'absolute');
+					@include Item(631, 0, 200, 0, 0, 130, 700, 'fit', 'absolute');
 					@media screen and (max-width: #{$screen-xs - 1}) {
 						@include Item(694, 0, 631, 0, 0, 0, 750,'fit','absolute');
 						height: auto;
@@ -219,6 +227,7 @@
 			}
 		}
 		&.lu{
+			@include Item(1920, 1213, 0, 0, 0, 0, 1920, 'fit', 'relative');
 			@media screen and (max-width: #{$screen-xs - 1}) {
 				@include Item(750, 2577, -77, 0, 0, 0, 750,'fit','relative');
 			}
@@ -232,32 +241,25 @@
 			}
 		}
 		&.chen{
+			@include Item(1920, 1238, 0, 0, 0, 0, 1920, 'fit', 'relative');
 			@media screen and (max-width: #{$screen-xs - 1}) {
 				@include Item(750, 2628, -79, 0, 0, 0, 750,'fit','relative');
 				.pic-1{
-					@media screen and (max-width: #{$screen-xs - 1}) {
-						@include Item(515, 511, 991, 378, 0, 'auto', 750,'fit','absolute');
-					}
+					@include Item(515, 511, 991, 378, 0, 'auto', 750,'fit','absolute');
 				}
 				.pic-2{
-					@media screen and (max-width: #{$screen-xs - 1}) {
-						@include Item(358, 285, 2169, 0, 0, 429, 750,'fit','absolute');
-					}
+					@include Item(358, 285, 2169, 0, 0, 429, 750,'fit','absolute');
 				}
 				.viewport{
 					.text{
-						@media screen and (max-width: #{$screen-xs - 1}) {
-							@include Item(643, 0, 1307, 0, 0, 50, 750,'fit','absolute');
-							height: auto;
-						}
+						@include Item(643, 0, 1307, 0, 0, 50, 750,'fit','absolute');
+						height: auto;
 					}
 				}
 				.headline{
 					ul, .text{
-						@media screen and (max-width: #{$screen-xs - 1}) {
-							@include Item(694, 0, 631, 0, 0, 0, 750,'fit','absolute');
-							height: auto;
-						}
+						@include Item(694, 0, 631, 0, 0, 0, 750,'fit','absolute');
+						height: auto;
 					}
 				}
 			}
@@ -284,26 +286,36 @@
 				.viewport{
 					margin-left: per(508, 1920);
 				}
-				.viewport{
-					@media screen and (max-width: #{$screen-xs - 1}) {
-						@include Item(750, 0, 0, 0, 0, 0, 750,'fit','absolute');
-						height: 100%;
+				.headline{
+					ul, .text{
+						@include Item(752, 0, 194, 0, 0, 0, 750,'fit','absolute');
+						height: auto;
 					}
-					.text{
-						@media screen and (max-width: #{$screen-xs - 1}) {
-							@include Item(643, 0, 1137, 0, 0, 50, 750,'fit','absolute');
-							height: auto;
-						}
+				}
+			}
+			.viewport{
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					@include Item(750, 0, 0, 0, 0, 0, 750,'fit','absolute');
+					height: 100%;
+				}
+				.text{
+					@media screen and (max-width: #{$screen-xs - 1}) {
+						@include Item(643, 0, 1137, 0, 0, 50, 750,'fit','absolute');
+						height: auto;
 					}
 				}
 			}
 
 		}
 	}
+
 	.viewport{
 		-webkit-backface-visibility: hidden;
 		@include Item(570, 0, 510, 0, 0, 930, 1920, 'fit', 'relative');
 		.text{
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			transform: translateZ(0) scale(1);
 			// @include SubItem();
 			.bold{
 				font-weight: 500;
