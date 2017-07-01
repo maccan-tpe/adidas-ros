@@ -16,8 +16,9 @@ app.partial.rule = function(){
 
 			var vw = $(window).width();
 			var vh = $(window).height();
+			console.log(vh);
 			anime({
-				targets: 'background',
+				targets: 'background, #content',
 				height: function(){
 					return vh;
 				},

@@ -39,8 +39,13 @@ $(function(){
 				$('html').addClass('loading-done');
 			}
 		});
-    	
+    	$('header .close').unbind('click').on('click', function(e){
+    		$(this).toggleClass('x');
+    	});
     };
+	$('.menu a').on('click', function(e){
+		$('header .close').removeClass('x');
+	});
 
 	var img = new Image();
 	img.onload = function(e){

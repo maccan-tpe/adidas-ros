@@ -1,26 +1,40 @@
 .home{
 	.kv{
 		overflow: hidden;
-		@include Item(1920, 0, 0, 'auto', 'auto', 0, 1920, 'fit', 'relative');
+		@include Item(1920, 1080, 0, 'auto', 'auto', 0, 1920, 'fit', 'relative');
 		position: relative;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(750, 950, 0, 0, 0, 0, 750,'fit','relative');
+			padding-top: 100vh;
+		}
 		.visual,.background,.shadow{
 			@include SubItem();
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				background-size: cover;
+				background-position: center;
+			}
 		}
 		.shadow{
 			background-size: cover;
 			background-position: center;
 		}
 		.visual{
-			@include Item(1920, 1080, 'auto', 'auto', 0, 0, 1920, 'fit', 'relative');
+			@include Item(1920, 1080, 0, 'auto', 'auto', 0, 1920, 'fit', 'absolute');
 			background-size: 100% auto;
 			background-position: center bottom;
 			background-repeat: no-repeat;
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				@include SubItem();
+			}
 		}
 		.here-to-create{
 			@include Item(429, 371, 217, 'auto', 'auto', 157, 1920, 'fit', 'absolute');
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				@include Item(389, 335, 103, 0, 0, 117, 750,'fit','absolute');
+			}
 			z-index: 0;
 			img{
-				@include SubItem();
+				@include SubImgW();
 			}
 		}
 		.cfa-bg{
@@ -45,6 +59,9 @@
 		}
 		a.cfa{
 			@include Item(508, 130, 616, 'auto', 'auto', 173, 1920, 'fit', 'absolute');
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				@include Item(692, 158, 'auto', 0, 162, 29, 750,'fit','absolute');
+			}
 			.adidas-sport-base{
 				@include Item(129, 130, 0, 'auto', 'auto', 0, 508, 'fit', 'absolute');
 				img{
@@ -69,11 +86,27 @@
 			}
 		}
 
+		.text{
+			@include Item(439, 125, 705, 'auto', 'auto', 282, 1920, 'fit', 'absolute');
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				@include Item(564, 141, 'auto', 0, 74, 177, 750,'fit','absolute');
+			}
+			img{
+				@include SubImgW();
+			}
+		}
+
 		.scroll{
 			@include Item(1920, 131, 'auto', 'auto', 0, 0, 1920, 'fit', 'absolute');
 			background-position: center;
 			background-size: auto 100%;
 			background-repeat: no-repeat;
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				@include Item(29, 66, 'auto', 0, 0, 360, 750,'fit','absolute');
+				background-position: center top;
+				background-size: 100% auto;
+				background-repeat: no-repeat;
+			}
 		}
 	}
 	.lin, .lu, .chen{
@@ -88,9 +121,15 @@
 			@include SubItem();
 			.pic-1{
 				@include Item(515, 511, 248, 'auto', 'auto', 1386, 1920, 'fit', 'absolute');
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					@include Item(515, 511, 865, 378, 0, 'auto', 750,'fit','absolute');
+				}
 			}
 			.pic-2{
 				@include Item(358, 285, 751, 'auto', 'auto', 1390, 1920, 'fit', 'absolute');
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					@include Item(358, 285, 2128, 0, 0, 429, 750,'fit','absolute');
+				}
 			}
 			.pic-1,.pic-2{
 				figure{
@@ -101,13 +140,23 @@
 			}
 			.headline{
 				@include Item(700, 0, 138, 'auto', 'auto', 800, 1920, 'fit', 'absolute');
-				ul{
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					@include Item(750, 0, 0, 0, 0, 0, 750,'fit','relative');
+				}
+				ul, .text{
 					@include Item(599, 0, 200, 'auto', 'auto', 130, 700, 'fit', 'absolute');
+					@media screen and (max-width: #{$screen-xs - 1}) {
+						@include Item(694, 0, 631, 0, 0, 0, 750,'fit','absolute');
+						height: auto;
+					}
 					height: auto;
 					color: #ff0054;
 				}
 				h3{
 					@include Item(599, 137, 9, 'auto', 'auto', 0, 700, 'fit', 'absolute');
+					@media screen and (max-width: #{$screen-xs - 1}) {
+						@include Item(358, 208, 230, 0, 0, 50, 750,'fit','absolute');
+					}
 					img{
 						@include SubItem();
 					}
@@ -121,7 +170,10 @@
 			}
 		}
 		a.cfa{
-			@include Item(508, 130, 616, 'auto', 'auto', 0, 570, 'fit', 'absolute');
+			@include Item(508, 130, 480, 'auto', 'auto', 0, 570, 'fit', 'absolute');
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				@include Item(692, 158, 'auto', 0, 111, 30, 750,'fit','absolute');
+			}
 			.adidas-sport-base{
 				@include Item(129, 130, 0, 'auto', 'auto', 0, 508, 'fit', 'absolute');
 				img{
@@ -136,28 +188,114 @@
 				}
 			}
 		}
+		.viewport{
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				@include Item(750, 0, 0, 0, 0, 0, 750,'fit','absolute');
+				height: 100%;
+			}
+			.text{
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					@include Item(643, 0, 1137, 0, 0, 50, 750,'fit','absolute');
+					height: auto;
+				}
+			}
+		}
+		.headline{
+			ul, .text{
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					@include Item(694, 0, 631, 0, 0, 0, 750,'fit','absolute');
+					height: auto;
+				}
+			}
+			h3{
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					@include Item(358, 208, 230, 0, 0, 50, 750,'fit','absolute');
+				}
+			}
+		}
+		&.lin{
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				@include Item(750, 2599, 0, 0, 0, 0, 750,'fit','relative');
+			}
+		}
+		&.lu{
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				@include Item(750, 2577, -77, 0, 0, 0, 750,'fit','relative');
+			}
+			.headline{
+				ul, .text{
+					@media screen and (max-width: #{$screen-xs - 1}) {
+						@include Item(694, 0, 546, 0, 0, 0, 750,'fit','absolute');
+						height: auto;
+					}
+				}
+			}
+		}
 		&.chen{
-			.parallax{
-				@include SubItem();
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				@include Item(750, 2628, -79, 0, 0, 0, 750,'fit','relative');
 				.pic-1{
-					margin-left: per(57, 1920);
+					@media screen and (max-width: #{$screen-xs - 1}) {
+						@include Item(515, 511, 991, 378, 0, 'auto', 750,'fit','absolute');
+					}
 				}
 				.pic-2{
-					margin-left: per(80, 1920);
+					@media screen and (max-width: #{$screen-xs - 1}) {
+						@include Item(358, 285, 2169, 0, 0, 429, 750,'fit','absolute');
+					}
 				}
-				.pic-1,.pic-2{
-					figure{
-						@include SubItem();
-						background-position: center;
-						background-size: cover;
+				.viewport{
+					.text{
+						@media screen and (max-width: #{$screen-xs - 1}) {
+							@include Item(643, 0, 1307, 0, 0, 50, 750,'fit','absolute');
+							height: auto;
+						}
 					}
 				}
 				.headline{
-					margin-left: per(386, 1920);
+					ul, .text{
+						@media screen and (max-width: #{$screen-xs - 1}) {
+							@include Item(694, 0, 631, 0, 0, 0, 750,'fit','absolute');
+							height: auto;
+						}
+					}
 				}
 			}
-			.viewport{
-				margin-left: per(508, 1920);
+			@media screen and (min-width: #{$screen-xs}) {
+				.parallax{
+					@include SubItem();
+					.pic-1{
+						margin-left: per(57, 1920);
+					}
+					.pic-2{
+						margin-left: per(80, 1920);
+					}
+					.pic-1,.pic-2{
+						figure{
+							@include SubItem();
+							background-position: center;
+							background-size: cover;
+						}
+					}
+					.headline{
+						margin-left: per(386, 1920);
+					}
+				}
+				.viewport{
+					margin-left: per(508, 1920);
+				}
+				.viewport{
+					@media screen and (max-width: #{$screen-xs - 1}) {
+						@include Item(750, 0, 0, 0, 0, 0, 750,'fit','absolute');
+						height: 100%;
+					}
+					.text{
+						@media screen and (max-width: #{$screen-xs - 1}) {
+							@include Item(643, 0, 1137, 0, 0, 50, 750,'fit','absolute');
+							height: auto;
+						}
+					}
+				}
 			}
 
 		}
@@ -166,7 +304,7 @@
 		-webkit-backface-visibility: hidden;
 		@include Item(570, 0, 510, 'auto', 'auto', 930, 1920, 'fit', 'relative');
 		.text{
-			@include SubItem();
+			// @include SubItem();
 			.bold{
 				font-weight: 500;
 			}

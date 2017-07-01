@@ -1,5 +1,9 @@
 .rule{
 	@include SubItem();
+	@media screen and (max-width: #{$screen-xs - 1}) {
+		position: relative;
+		height: auto!important;;
+	}
 	.background,.shadow{
 		@include SubItem();
 	}
@@ -17,14 +21,23 @@
 		position: absolute;
 		margin: 0 0 0 per(360, 1920);
 		height: 100%;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(690, 146, 0, 0, 0, 30, 750,'fit','relative');
+			height: auto;
+		}
 		.text{
 			@include SubItem();
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				position: relative;
+				height: auto;
+			}
 			.cap{
 				color: #ff0054;
 				position: relative;
 				vertical-align: middle;
 				margin-left: 0;
 				margin-left: 0.19em;
+				font-weight: 600;
 				&:before{
 					position: absolute;
 					top:50%;
@@ -33,15 +46,24 @@
 					width: 0.6em;
 					left: -1em;					
 					background: rgba(255,255,255,0.2);
+					@media screen and (max-width: #{$screen-xs - 1}) {
+						display: none;
+					}
 				}
 				img{
 					margin-right: 0.6em;
+					@media screen and (max-width: #{$screen-xs - 1}) {
+						width: 0.6em;
+					}
 				}
 			}
 			p{
 				margin-left: 5.1em;
 				line-height: 1.8em;
 				letter-spacing: 1px;
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					margin-left: 1em;
+				}
 
 			}
 			ul{
@@ -49,6 +71,10 @@
 				margin-left: 11em;
 				padding-left: 1em;
 				position: relative;
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					margin-left: 0;
+					padding-left: 0;
+				}
 				&:before{
 					position: absolute;
 					content: '';
@@ -58,6 +84,9 @@
 					height: calc(100% - 2.3em);
 					left: 0;
 					top: 1.2em;
+					@media screen and (max-width: #{$screen-xs - 1}) {
+						display: none;
+					}
 				}
 				li{
 					margin-bottom: 2.5em;
@@ -69,6 +98,11 @@
 				margin-bottom: 10.5em;
 				border:1px solid rgba(255,255,255,0.2);
 				padding: 1em 1em 1em 2em;
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					margin-left: 1em;
+					padding: 0.5em 0.5em 0.5em 1.5em;
+					margin-bottom: 5em;
+				}
 				li{
 					line-height: 1.8em;
 					letter-spacing: 1px;
@@ -81,6 +115,10 @@
 		}
 		h2{
 			@include Item(237, 71, 185, 'auto', 'auto', 87, 1200, 'fit', 'relative');
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				@include Item(331, 98, 0, 0, 0, 0, 690,'fit','relative');
+				height: auto;
+			}
 			img{
 				@include SubItem();
 			}

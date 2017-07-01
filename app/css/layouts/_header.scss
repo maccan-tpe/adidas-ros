@@ -7,6 +7,15 @@ header {
 	z-index: 10;
 	line-height: 75px;
 	// border-bottom: 1px solid #444;
+	.menu-bg{
+		@include SubItem();
+		position: fixed;
+		background: 0 0/100% 100%;
+		border-left: 5px solid #ff0054;	
+		@include animation(
+			menu-out 0.5s 1 linear forwards 0s
+		);
+	}
 	.menu{
 		// @include Item('auto', 'auto', 0, 90, 'auto', 'auto', 1920, 'fit', 'relative');
 		position: absolute;
@@ -45,14 +54,51 @@ header {
 				text-decoration: line-through;
 			}
 		}
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include SubItem();
+			position: fixed;
+			a{
+				position: absolute;
+				&:after{
+					display: none;
+				}
+				img{
+					@include SubImgW();
+				}
+				&:nth-child(1){
+					left: per(80, 750);
+					top: per(227, 950);
+					width: per(291, 750);
+					padding-top: per(70, 750);
+				}
+				&:nth-child(2){
+					left: per(80, 750);
+					top: per(382, 950);
+					width: per(409, 750);
+					padding-top: per(142, 750);
+				}
+				&:nth-child(3){
+					left: per(80, 750);
+					top: per(599, 950);
+					width: per(290, 750);
+					padding-top: per(70, 750);
+				}
+			}
+		}
+		@include animation(
+			menu-out 0.5s 1 linear forwards 0s
+		);
 	}
 
 	.logo{
 		a{
 			display: block;
 			@include Item(75, 50, 20, 'auto', 'auto', 30, 1920, 'none', 'absolute');
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				@include Item(75, 50, 30, 0, 0, 30, 750,'fit','absolute');
+			}
 			img{
-				@include SubItem();
+				@include SubImgW();
 			}
 		}
 		font-size: em(11,14);
@@ -61,12 +107,109 @@ header {
 	.fb{
 		display: block;
 		@include Item(8, 17, 30, 37, 'auto', 'auto', 1920, 'none', 'absolute');
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(91, 79, 'auto', 0, 36, 328, 750,'fit','fixed');
+			@include animation(
+				menu-out 0.5s 1 linear forwards 0s
+			);
+			z-index: 1!important;
+		}
 		img{
-			@include SubItem();
+			@include SubImgW();
 		}
 	}
 	.background{
 		@include SubItem();
 		opacity: 0;
+	}
+	.close{
+		opacity: 1;
+		@include Item(40, 30, 39, 30, 0, 'auto', 750,'fit','absolute');
+		transition-duration: 0.35s;
+		figure.x, figure.burg{
+			background-position: center;
+			background-size: cover;
+			transition-duration: 0.35s;
+			@include SubItem();
+		}
+		figure.x{
+			opacity: 0;
+			filter: blur(20px);
+		}
+		figure.burg{
+			opacity: 1;
+		}
+		&.x{
+			@include Item(34, 35, 39, 33, 0, 'auto', 750,'fit','absolute');
+			figure.x{
+				opacity: 1;
+				filter: none;
+			}
+			figure.burg{
+				opacity: 0;
+				filter: blur(20px);
+			}
+			&~.menu-bg{
+				@include animation(
+					menu-in 0.5s 1 linear forwards 0s
+				);
+			}
+			&~.menu{
+				@include animation(
+					menu-in 0.5s 1 linear forwards 0s
+				);
+			}
+			&~.fb{
+				@include animation(
+					fb-in 0.5s 1 linear forwards 0s
+				);
+			}
+		}
+	}
+}
+
+@include keyframes ( menu-in ){
+	from {
+		z-index: 0;
+		opacity: 0;
+		filter: blur(20px);
+	}
+	to {
+		z-index: 0;
+		opacity: 1;
+		filter: none;
+	}
+}
+
+
+@include keyframes ( fb-in ){
+	from {
+		z-index: 1;
+		opacity: 0;
+		filter: blur(20px);
+	}
+	to {
+		z-index: 1;
+		opacity: 1;
+		filter: none;
+	}
+}
+
+@include keyframes ( menu-out ){
+	from {
+		z-index: 0;
+		opacity: 1;
+		filter: none;
+	}
+	99% {
+		z-index: 0;
+		opacity: 0;
+		filter: blur(20px);
+	}
+	to {
+		z-index: -20;
+		height: 0;
+		opacity: 0;
+		filter: blur(20px);
 	}
 }

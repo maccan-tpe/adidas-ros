@@ -55,7 +55,20 @@ app.partial.spa = function(){
 					pushState({uri: uri, name: name, menu: menu, title: title}, 'update content' + uri);
 				}
 
-				container.html(htmlContent);
+				container.html(htmlContent).promise().done(function(e){
+					console.log($('a[data-href]', container));
+					$('a[data-href]', container).on('click', function(e){
+						var $ele = $(this);
+						var uri = $ele.attr('data-href');
+						var name = $ele.attr('data-ref');
+						var menu = null;
+						updateContent(uri, name, menu, function(){
+							// console.log(name);
+							$ele.addClass('active').siblings().removeClass('active');
+						});
+					});
+
+				});
 
 				(callback || function(){})();
 
