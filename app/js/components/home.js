@@ -22,11 +22,13 @@ app.partial.home = function(){
 			var vw = $(window).width();
 			var vh = $(window).height();
 
-			anime({
-				targets: 'html,body',
-				easing: 'easeInOutExpo',
-				scrollTop: $('#content >section.active, #content >article.active').offset().top
-			});
+			if($(window).width() > 800){
+				anime({
+					targets: 'html,body',
+					easing: 'easeInOutExpo',
+					scrollTop: $('#content >section.active, #content >article.active').offset().top
+				});
+			}
 			// anime({
 			// 	targets: '.kv.active',
 			// 	opacity: function(){
