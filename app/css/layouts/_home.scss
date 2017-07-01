@@ -158,7 +158,7 @@
 						@include Item(358, 208, 230, 0, 0, 50, 750,'fit','absolute');
 					}
 					img{
-						@include SubItem();
+						@include SubImgW();
 					}
 				}
 			}
