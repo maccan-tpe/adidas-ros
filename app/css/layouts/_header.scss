@@ -124,6 +124,16 @@ header {
 			@include SubImgW();
 		}
 	}
+	.fb1{
+		@include Item(91, 79, 20, 20, 0, 'auto', 750, 'fit','fixed');
+		// @include animation(
+		// 	menu-out 0.5s 1 linear forwards 0s
+		// );
+		z-index: 1!important;
+		img{
+			@include SubImgW();
+		}
+	}
 	.background{
 		@include SubItem();
 		opacity: 0;
