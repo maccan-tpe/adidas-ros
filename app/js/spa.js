@@ -46,7 +46,7 @@ app.partial.spa = function(){
 					}
 					if($(element).attr('role') === 'menu'){
 						$('.menu a', element).each(function(i){
-							console.log($('[role=menu] a').eq(i), $(this));
+							// console.log($('[role=menu] a').eq(i), $(this));
 							$('[role=menu] .menu a').eq(i).attr('data-href', $(this).attr('data-href'));
 						});
 					}
@@ -56,7 +56,7 @@ app.partial.spa = function(){
 				}
 
 				container.html(htmlContent).promise().done(function(e){
-					console.log($('a[data-href]', container));
+					// console.log($('a[data-href]', container));
 					$('a[data-href]', container).on('click', function(e){
 						var $ele = $(this);
 						var uri = $ele.attr('data-href');

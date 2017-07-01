@@ -23,6 +23,11 @@
         "assets/javascripts/bootstrap.js"
       ]
     },
+    "animejs": {
+      "main": [
+        "anime.min.js"
+      ]
+    },
     "font-awesome": {
       "main": [
         "less/font-awesome.less",

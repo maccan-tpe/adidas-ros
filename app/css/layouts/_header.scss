@@ -47,6 +47,9 @@ header {
 					width: 0;
 				}
 			}
+			&+a{
+				margin-left: 45px;
+			}
 
 			&[disabled]{
 				opacity: 0.3;
@@ -84,16 +87,16 @@ header {
 					padding-top: per(70, 750);
 				}
 			}
+			@include animation(
+				menu-out 0.5s 1 linear forwards 0s
+			);
 		}
-		@include animation(
-			menu-out 0.5s 1 linear forwards 0s
-		);
 	}
 
 	.logo{
 		a{
 			display: block;
-			@include Item(75, 50, 20, 'auto', 'auto', 30, 1920, 'none', 'absolute');
+			@include Item(75, 50, 20, 0, 0, 30, 1920, 'none', 'absolute');
 			@media screen and (max-width: #{$screen-xs - 1}) {
 				@include Item(75, 50, 30, 0, 0, 30, 750,'fit','absolute');
 			}

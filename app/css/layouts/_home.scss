@@ -28,7 +28,7 @@
 			}
 		}
 		.here-to-create{
-			@include Item(429, 371, 217, 'auto', 'auto', 157, 1920, 'fit', 'absolute');
+			@include Item(429, 371, 217, 0, 0, 157, 1920, 'fit', 'absolute');
 			@media screen and (max-width: #{$screen-xs - 1}) {
 				@include Item(389, 335, 103, 0, 0, 117, 750,'fit','absolute');
 			}
@@ -38,7 +38,7 @@
 			}
 		}
 		.cfa-bg{
-			@include Item(536, 355, 511, 'auto', 'auto', 229, 1920, 'fit', 'absolute');
+			@include Item(536, 355, 511, 0, 0, 229, 1920, 'fit', 'absolute');
 			background-position: center;
 			background-size: cover;
 			z-index: 1;
@@ -58,19 +58,19 @@
 			}
 		}
 		a.cfa{
-			@include Item(508, 130, 616, 'auto', 'auto', 173, 1920, 'fit', 'absolute');
+			@include Item(508, 130, 616, 0, 0, 173, 1920, 'fit', 'absolute');
 			@media screen and (max-width: #{$screen-xs - 1}) {
 				@include Item(692, 158, 'auto', 0, 162, 29, 750,'fit','absolute');
 			}
 			.adidas-sport-base{
-				@include Item(129, 130, 0, 'auto', 'auto', 0, 508, 'fit', 'absolute');
+				@include Item(129, 130, 0, 0, 0, 0, 508, 'fit', 'absolute');
 				img{
 					@include SubItem();
 				}
 
 			}
 			.cfa{
-				@include Item(375, 64, 25, 'auto', 'auto', 133, 508, 'fit', 'absolute');
+				@include Item(375, 64, 25, 0, 0, 133, 508, 'fit', 'absolute');
 				img{
 					@include SubItem();
 				}
@@ -87,7 +87,7 @@
 		}
 
 		.text{
-			@include Item(439, 125, 705, 'auto', 'auto', 282, 1920, 'fit', 'absolute');
+			@include Item(439, 125, 705, 0, 0, 282, 1920, 'fit', 'absolute');
 			@media screen and (max-width: #{$screen-xs - 1}) {
 				@include Item(564, 141, 'auto', 0, 74, 177, 750,'fit','absolute');
 			}
@@ -111,7 +111,7 @@
 	}
 	.lin, .lu, .chen{
 		overflow: hidden;
-		@include Item(1920, 1200, 0, 'auto', 'auto', 0, 1920, 'fit', 'relative');
+		@include Item(1920, 1200, 0, 0, 0, 0, 1920, 'fit', 'relative');
 		.background{
 			@include SubItem();
 			background-position: center;
@@ -120,13 +120,13 @@
 		.parallax{
 			@include SubItem();
 			.pic-1{
-				@include Item(515, 511, 248, 'auto', 'auto', 1386, 1920, 'fit', 'absolute');
+				@include Item(515, 511, 248, 0, 0, 1386, 1920, 'fit', 'absolute');
 				@media screen and (max-width: #{$screen-xs - 1}) {
 					@include Item(515, 511, 865, 378, 0, 'auto', 750,'fit','absolute');
 				}
 			}
 			.pic-2{
-				@include Item(358, 285, 751, 'auto', 'auto', 1390, 1920, 'fit', 'absolute');
+				@include Item(358, 285, 751, 0, 0, 1390, 1920, 'fit', 'absolute');
 				@media screen and (max-width: #{$screen-xs - 1}) {
 					@include Item(358, 285, 2128, 0, 0, 429, 750,'fit','absolute');
 				}
@@ -139,12 +139,12 @@
 				}
 			}
 			.headline{
-				@include Item(700, 0, 138, 'auto', 'auto', 800, 1920, 'fit', 'absolute');
+				@include Item(700, 0, 138, 0, 0, 800, 1920, 'fit', 'absolute');
 				@media screen and (max-width: #{$screen-xs - 1}) {
 					@include Item(750, 0, 0, 0, 0, 0, 750,'fit','relative');
 				}
 				ul, .text{
-					@include Item(599, 0, 200, 'auto', 'auto', 130, 700, 'fit', 'absolute');
+					@include Item(599, 0, 200, 0, 0, 130, 700, 'fit', 'absolute');
 					@media screen and (max-width: #{$screen-xs - 1}) {
 						@include Item(694, 0, 631, 0, 0, 0, 750,'fit','absolute');
 						height: auto;
@@ -153,7 +153,7 @@
 					color: #ff0054;
 				}
 				h3{
-					@include Item(599, 137, 9, 'auto', 'auto', 0, 700, 'fit', 'absolute');
+					@include Item(599, 137, 9, 0, 0, 0, 700, 'fit', 'absolute');
 					@media screen and (max-width: #{$screen-xs - 1}) {
 						@include Item(358, 208, 230, 0, 0, 50, 750,'fit','absolute');
 					}
@@ -170,19 +170,19 @@
 			}
 		}
 		a.cfa{
-			@include Item(508, 130, 480, 'auto', 'auto', 0, 570, 'fit', 'absolute');
+			@include Item(508, 130, 480, 0, 0, 0, 570, 'fit', 'absolute');
 			@media screen and (max-width: #{$screen-xs - 1}) {
 				@include Item(692, 158, 'auto', 0, 111, 30, 750,'fit','absolute');
 			}
 			.adidas-sport-base{
-				@include Item(129, 130, 0, 'auto', 'auto', 0, 508, 'fit', 'absolute');
+				@include Item(129, 130, 0, 0, 0, 0, 508, 'fit', 'absolute');
 				img{
 					@include SubItem();
 				}
 
 			}
 			.cfa{
-				@include Item(375, 64, 25, 'auto', 'auto', 133, 508, 'fit', 'absolute');
+				@include Item(375, 64, 25, 0, 0, 133, 508, 'fit', 'absolute');
 				img{
 					@include SubItem();
 				}
@@ -302,7 +302,7 @@
 	}
 	.viewport{
 		-webkit-backface-visibility: hidden;
-		@include Item(570, 0, 510, 'auto', 'auto', 930, 1920, 'fit', 'relative');
+		@include Item(570, 0, 510, 0, 0, 930, 1920, 'fit', 'relative');
 		.text{
 			// @include SubItem();
 			.bold{
