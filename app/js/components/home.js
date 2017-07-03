@@ -120,13 +120,13 @@ app.partial.home = function(){
 			// 	easing: 'easeInOutExpo'
 			// });
 
-			// if($(window).width() > 800){
-			// 	$('.home article .text').mCustomScrollbar({
-			// 		autoDraggerLength: false
-			// 	});
-			// }else{			
-			// 	$('.home article .text').mCustomScrollbar('destroy');
-			// }
+			if($(window).width() > 800){
+				$('.home article aside.text').mCustomScrollbar({
+					autoDraggerLength: false
+				});
+			}else{			
+				$('.home article aside.text').mCustomScrollbar('destroy');
+			}
 			// console.log('resize');
 
 		});

@@ -134,7 +134,7 @@
 				}
 			}
 			.pic-2{
-				@include Item(358, 285, 751, 0, 0, 1390, 1920, 'fit', 'absolute');
+				@include Item(358, 285, 751, 0, 0, 1560, 1920, 'fit', 'absolute');
 				@media screen and (max-width: #{$screen-xs - 1}) {
 					@include Item(358, 285, 2128, 0, 0, 429, 750,'fit','absolute');
 				}
@@ -152,7 +152,7 @@
 					@include Item(750, 0, 0, 0, 0, 0, 750,'fit','relative');
 				}
 				ul, .text{
-					@include Item(631, 0, 200, 0, 0, 130, 700, 'fit', 'absolute');
+					@include Item(691, 0, 200, 0, 0, 130, 700, 'fit', 'absolute');
 					@media screen and (max-width: #{$screen-xs - 1}) {
 						@include Item(694, 0, 631, 0, 0, 0, 750,'fit','absolute');
 						height: auto;
@@ -238,6 +238,10 @@
 						height: auto;
 					}
 				}
+				ul, .text{
+					@include Item(937, 0, 194, 0, 0, 0, 700,'fit','absolute');
+					height: auto;
+				}
 			}
 		}
 		&.chen{
@@ -267,7 +271,7 @@
 				}
 				.headline{
 					ul, .text{
-						@include Item(752, 0, 194, 0, 0, 0, 750,'fit','absolute');
+						@include Item(867, 0, 194, 0, 0, 0, 700,'fit','absolute');
 						height: auto;
 					}
 				}
@@ -311,7 +315,7 @@
 
 	.viewport{
 		-webkit-backface-visibility: hidden;
-		@include Item(570, 0, 510, 0, 0, 930, 1920, 'fit', 'relative');
+		@include Item(637, 0, 510, 0, 0, 930, 1920, 'fit', 'relative');
 		.text{
 			-webkit-backface-visibility: hidden;
 			backface-visibility: hidden;
@@ -319,6 +323,15 @@
 			// @include SubItem();
 			.bold{
 				font-weight: 500;
+			}
+		}
+		aside.text{
+			max-height: 330px;
+			overflow: auto;
+			width: auto;
+			height: 500px;
+			img{
+				position: relative;
 			}
 		}
 	}
