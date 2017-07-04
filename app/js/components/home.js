@@ -190,7 +190,7 @@ app.partial.home = function(){
 		});
 
 
-		$('#content').on('mousewheel', function(){
+		$(window).on('scroll resizeend', function(){
 			var currentTop = $(window).scrollTop() + $(window).height() / 3;
 			var currentButt = $(window).scrollTop() + $(window).height() / 3 * 2;
 			$('.kv, article.lin, article.chen, article.lu').each(function(i, section){

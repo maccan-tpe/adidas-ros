@@ -14,7 +14,7 @@ app.partial.ga = function(){
 		$('.kv, article.lin, article.chen, article.lu').on('section:active', function(){
 			if(typeof ga !== 'undefined' && $(this).attr('data-ga-send') * 1 !== 1){
 				ga('send', 'pageview', { 'page': $(this).attr('data-ga-pv-m'), 'title': $(this).attr('data-ga-pv-m')});
-				$(this).attr('data-ga-send', 1);
+				// $(this).attr('data-ga-send', 1);
 			}
 		});
 	}else{
