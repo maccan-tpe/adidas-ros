@@ -19,106 +19,9 @@ app.partial.home = function(){
 			e.stopPropagation();
 			e.preventDefault();
 
-			var vw = $(window).width();
-			var vh = $(window).height();
+			// var vw = $(window).width();
+			// var vh = $(window).height();
 
-			if($(window).width() > 800){
-				anime({
-					targets: 'html,body',
-					easing: 'easeInOutExpo',
-					scrollTop: $('#content >section.active, #content >article.active').offset().top
-				});
-			}
-			// anime({
-			// 	targets: '.kv.active',
-			// 	opacity: function(){
-
-			// 		// anime({
-			// 		// 	targets: '.kv.active .here-to-create, .kv.active a.cfa, .kv.active .cfa-bg',
-			// 		// 	top: (vh - (vw * 1080 / 1920)),
-			// 		// 	duration: 1200
-			// 		// });
-			// 		anime({
-			// 			targets: 'footer',
-			// 			opacity: 0,
-			// 			easing: 'easeInOutExpo'
-			// 		});
-			// 		anime({
-			// 			targets: '#content >*:not(.kv)',
-			// 			opacity: 1,
-			// 			filter: 'blur(20px)',
-			// 			duration: 800,
-			// 			easing: 'easeInOutExpo'
-			// 		});
-			// 		return 1;
-			// 	},
-			// 	filter: 'none',
-			// 	duration: 800,
-			// 	easing: 'easeInOutExpo'
-			// });
-			// anime({
-			// 	targets: '.lin.active',
-			// 	opacity: function(){
-
-			// 		anime({
-			// 			targets: '#content >*:not(.lin)',
-			// 			opacity: 1,
-			// 			filter: 'blur(20px)',
-			// 			duration: 800,
-			// 			easing: 'easeInOutExpo'
-			// 		});
-			// 		anime({
-			// 			targets: 'footer',
-			// 			opacity: 0,
-			// 			easing: 'easeInOutExpo'
-			// 		});
-			// 		return 1;
-			// 	},
-			// 	duration: 800,
-			// 	easing: 'easeInOutExpo'
-			// });
-			// anime({
-			// 	targets: '.chen.active',
-			// 	opacity: function(){
-
-			// 		anime({
-			// 			targets: '#content >*:not(.chen)',
-			// 			opacity: 1,
-			// 			filter: 'blur(20px)',
-			// 			duration: 800,
-			// 			easing: 'easeInOutExpo'
-			// 		});
-			// 		anime({
-			// 			targets: 'footer',
-			// 			opacity: 0,
-			// 			easing: 'easeInOutExpo'
-			// 		});
-			// 		return vh;
-			// 	},
-			// 	duration: 800,
-			// 	easing: 'easeInOutExpo'
-			// });
-			// anime({
-			// 	targets: '.lu.active',
-			// 	opacity: function(){
-
-			// 		anime({
-			// 			targets: '#content >*:not(.lu)',
-			// 			opacity: 1,
-			// 			filter: 'blur(20px)',
-			// 			duration: 800,
-			// 			easing: 'easeInOutExpo'
-			// 		});
-			// 		anime({
-			// 			targets: 'footer',
-			// 			opacity: 1,
-			// 			easing: 'easeInOutExpo'
-			// 		});
-			// 		return 1;
-			// 	},
-			// 	duration: 800,
-			// 	easing: 'easeInOutExpo'
-			// });
 
 			if($(window).width() > 800){
 				$('.home article aside.text').mCustomScrollbar({
@@ -129,6 +32,97 @@ app.partial.home = function(){
 			}
 			// console.log('resize');
 
+			
+		// 	anime({
+		// 		targets: '.kv.active',
+		// 		opacity: function(){
+
+		// 			// anime({
+		// 			// 	targets: '.kv.active .here-to-create, .kv.active a.cfa, .kv.active .cfa-bg',
+		// 			// 	top: (vh - (vw * 1080 / 1920)),
+		// 			// 	duration: 1200
+		// 			// });
+		// 			anime({
+		// 				targets: 'footer',
+		// 				opacity: 0,
+		// 				easing: 'easeInOutExpo'
+		// 			});
+		// 			anime({
+		// 				targets: '#content >*:not(.kv)',
+		// 				opacity: 1,
+		// 				filter: 'blur(20px)',
+		// 				duration: 800,
+		// 				easing: 'easeInOutExpo'
+		// 			});
+		// 			return 1;
+		// 		},
+		// 		filter: 'none',
+		// 		duration: 800,
+		// 		easing: 'easeInOutExpo'
+		// 	});
+		// 	anime({
+		// 		targets: '.lin.active',
+		// 		opacity: function(){
+
+		// 			anime({
+		// 				targets: '#content >*:not(.lin)',
+		// 				opacity: 1,
+		// 				filter: 'blur(20px)',
+		// 				duration: 800,
+		// 				easing: 'easeInOutExpo'
+		// 			});
+		// 			anime({
+		// 				targets: 'footer',
+		// 				opacity: 0,
+		// 				easing: 'easeInOutExpo'
+		// 			});
+		// 			return 1;
+		// 		},
+		// 		duration: 800,
+		// 		easing: 'easeInOutExpo'
+		// 	});
+		// 	anime({
+		// 		targets: '.chen.active',
+		// 		opacity: function(){
+
+		// 			anime({
+		// 				targets: '#content >*:not(.chen)',
+		// 				opacity: 1,
+		// 				filter: 'blur(20px)',
+		// 				duration: 800,
+		// 				easing: 'easeInOutExpo'
+		// 			});
+		// 			anime({
+		// 				targets: 'footer',
+		// 				opacity: 0,
+		// 				easing: 'easeInOutExpo'
+		// 			});
+		// 			return vh;
+		// 		},
+		// 		duration: 800,
+		// 		easing: 'easeInOutExpo'
+		// 	});
+		// 	anime({
+		// 		targets: '.lu.active',
+		// 		opacity: function(){
+
+		// 			anime({
+		// 				targets: '#content >*:not(.lu)',
+		// 				opacity: 1,
+		// 				filter: 'blur(20px)',
+		// 				duration: 800,
+		// 				easing: 'easeInOutExpo'
+		// 			});
+		// 			anime({
+		// 				targets: 'footer',
+		// 				opacity: 1,
+		// 				easing: 'easeInOutExpo'
+		// 			});
+		// 			return 1;
+		// 		},
+		// 		duration: 800,
+		// 		easing: 'easeInOutExpo'
+		// 	});
 		});
 
 
@@ -164,52 +158,69 @@ app.partial.home = function(){
 		// 		$('#content').trigger('resizeend');
 		// 	}
 		// });
-		$('.kv, article.lin, article.chen, article.lu').on('mousemove', function(e){
-			$(this).addClass('active').siblings().removeClass('active');
-			// $('#content').trigger('resizeend');
+		// $('.kv, article.lin, article.chen, article.lu').on('mousemove', function(e){
+		// 	$(this).addClass('active').siblings().removeClass('active');
+		// 	// $('#content').trigger('resizeend');
+		// });
+
+		var range = {}, activeSection = null, scrollTop = 0;
+
+		$('.kv, article.lin, article.chen, article.lu').each(function(i){
+
+			var id = 'Section' + Math.floor(new Date()*Math.random());
+
+			$(this).attr('id', id);
+
+			var ele = this;
+
+			range[id] = {};
+			// if(!$('#'+id).length){
+			// 	return;
+			// }
+			range[id].ele = this;
+			range[id].top = function(){
+				return $(this.ele).offset().top;// - $(this.ele).outerHeight() *1;
+			};
+			range[id].butt = function(){
+				return $(this.ele).offset().top + $(this.ele).outerHeight();// *2;
+			};
+			range[id].middle = function(){
+				return $(this.ele).offset().top + $(this.ele).outerHeight() / 2;// *2;
+			};
 		});
 
 
-		// $('.kv, article.lin, article.chen, article.lu').each(function(i){
-
-		// 	var id = 'Section' + (new Date());
-		// 	$(this).attr('id', id);
-
-		// 	range[id] = {};
-		// 	// if(!$('#'+id).length){
-		// 	// 	return;
-		// 	// }
-		// 	range[id].top = function(){
-		// 		return $('#' + id).offset().top;// - $('#' + id).outerHeight() *1;
-		// 	};
-		// 	range[id].butt = function(){
-		// 		return $('#' + id).offset().top + $('#' + id).outerHeight();// *2;
-		// 	};
-		// 	range[id].middle = function(){
-		// 		return $('#' + id).offset().top + $('#' + id).outerHeight() / 2;// *2;
-		// 	};
-		// });
-
+		$('#content').on('mousewheel', function(){
+			var currentTop = $(window).scrollTop() + $(window).height() / 3;
+			var currentButt = $(window).scrollTop() + $(window).height() / 3 * 2;
+			$('.kv, article.lin, article.chen, article.lu').each(function(i, section){
+				var sectionId = $(this).attr('id');
+				var rg = range[sectionId];
+				if(rg.middle() >= currentTop  && rg.middle() <= currentButt){
+					if(activeSection != sectionId){
+						activeSection = sectionId;
+					}
+				} 
+				if(activeSection && !$('#' + activeSection).hasClass('active')){
+					$('#' + activeSection).addClass('active').trigger('section:active')
+						.siblings().removeClass('active');
+					// gotoActive($('#' + activeSection));
+					// console.log(activeSection)
+				}
+				scrollTop = currentTop;
+			});
+		});
 		
-		// $(window).on('scroll resize', function(){
-		// 	var currentTop = $(window).scrollTop() + $(window).height() / 3;
-		// 	var currentButt = $(window).scrollTop() + $(window).height() / 3 * 2;
-		// 	$('.section').each(function(i, section){
-		// 		var sectionId = $(this).attr('id');
-		// 		var rg = range[sectionId];
-		// 		if(rg.middle() >= currentTop  && rg.middle() <= currentButt){
-		// 			if(activeSection != sectionId){
-		// 				activeSection = sectionId;
-		// 			}
-		// 		} 
-		// 		if(activeSection && !$('#' + activeSection).hasClass('on')){
-		// 			$('#' + activeSection).addClass('on').trigger('section:on')
-		// 				.siblings().removeClass('on');
-		// 		}
-		// 		scrollTop = currentTop;
-		// 	});
-		// });
-		
+		function gotoActive(to){
+			// console.log(to);
+			if($(window).width() > 800){
+				anime({
+					targets: 'html,body',
+					easing: 'easeInOutExpo',
+					scrollTop: to.offset().top
+				});
+			}
+		}
 	});
 
 	if($('#content.home').length){
