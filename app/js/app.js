@@ -91,7 +91,7 @@ $(function(){
 			}
 		]);
 	};
-	img.src = $('.loading-mask img').attr('data-src');
+	// img.src = $('.loading-mask img').attr('data-src');
 });
 
 

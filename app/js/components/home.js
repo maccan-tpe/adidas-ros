@@ -168,6 +168,47 @@ app.partial.home = function(){
 			$(this).addClass('active').siblings().removeClass('active');
 			// $('#content').trigger('resizeend');
 		});
+
+
+		// $('.kv, article.lin, article.chen, article.lu').each(function(i){
+
+		// 	var id = 'Section' + (new Date());
+		// 	$(this).attr('id', id);
+
+		// 	range[id] = {};
+		// 	// if(!$('#'+id).length){
+		// 	// 	return;
+		// 	// }
+		// 	range[id].top = function(){
+		// 		return $('#' + id).offset().top;// - $('#' + id).outerHeight() *1;
+		// 	};
+		// 	range[id].butt = function(){
+		// 		return $('#' + id).offset().top + $('#' + id).outerHeight();// *2;
+		// 	};
+		// 	range[id].middle = function(){
+		// 		return $('#' + id).offset().top + $('#' + id).outerHeight() / 2;// *2;
+		// 	};
+		// });
+
+		
+		// $(window).on('scroll resize', function(){
+		// 	var currentTop = $(window).scrollTop() + $(window).height() / 3;
+		// 	var currentButt = $(window).scrollTop() + $(window).height() / 3 * 2;
+		// 	$('.section').each(function(i, section){
+		// 		var sectionId = $(this).attr('id');
+		// 		var rg = range[sectionId];
+		// 		if(rg.middle() >= currentTop  && rg.middle() <= currentButt){
+		// 			if(activeSection != sectionId){
+		// 				activeSection = sectionId;
+		// 			}
+		// 		} 
+		// 		if(activeSection && !$('#' + activeSection).hasClass('on')){
+		// 			$('#' + activeSection).addClass('on').trigger('section:on')
+		// 				.siblings().removeClass('on');
+		// 		}
+		// 		scrollTop = currentTop;
+		// 	});
+		// });
 		
 	});
 
