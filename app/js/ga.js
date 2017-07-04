@@ -26,7 +26,7 @@ app.partial.ga = function(){
 			if(typeof ga !== 'undefined' && $(this).attr('data-ga-send') * 1 !== 1){
 				$(this).attr('data-ga-pv');
 				ga('send', 'pageview', { 'page': $(this).attr('data-ga-pv'), 'title': $(this).attr('data-ga-pv')});
-				$(this).attr('data-ga-send', 1);
+				// $(this).attr('data-ga-send', 1);
 			}
 		});
 

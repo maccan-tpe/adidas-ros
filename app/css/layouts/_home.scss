@@ -130,13 +130,14 @@
 			.pic-1{
 				@include Item(515, 511, 248, 0, 0, 1386, 1920, 'fit', 'absolute');
 				@media screen and (max-width: #{$screen-xs - 1}) {
-					@include Item(515, 511, 865, 378, 0, 'auto', 750,'fit','absolute');
+					@include Item(515, 511, 865, 0, 0, -142, 750,'fit','absolute');
 				}
 			}
 			.pic-2{
 				@include Item(358, 285, 751, 0, 0, 1560, 1920, 'fit', 'absolute');
 				@media screen and (max-width: #{$screen-xs - 1}) {
-					@include Item(358, 285, 2128, 0, 0, 429, 750,'fit','absolute');
+					@include Item(358, 285, 2248, -73, 0, 'auto', 750,'fit','absolute');
+					left: auto!important;
 				}
 			}
 			.pic-1,.pic-2{
@@ -295,10 +296,10 @@
 			@media screen and (max-width: #{$screen-xs - 1}) {
 				@include Item(750, 2628, -79, 0, 0, 0, 750,'fit','relative');
 				.pic-1{
-					@include Item(515, 511, 991, 378, 0, 'auto', 750,'fit','absolute');
+					@include Item(515, 511, 988, 0, 0, -108, 750,'fit','absolute');
 				}
 				.pic-2{
-					@include Item(358, 285, 2169, 0, 0, 429, 750,'fit','absolute');
+					@include Item(358, 285, 1981, 0, 0, 511, 750,'fit','absolute');
 				}
 				.viewport{
 					.text{
