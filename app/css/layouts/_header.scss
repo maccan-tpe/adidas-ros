@@ -185,6 +185,10 @@ header {
 			}
 		}
 	}
+
+	a{
+		filter: drop-shadow(0 0 5px #000);
+	}
 }
 
 @include keyframes ( menu-in ){
