@@ -204,8 +204,15 @@ app.partial.home = function(){
 				if(activeSection && !$('#' + activeSection).hasClass('active')){
 					$('#' + activeSection).addClass('active').trigger('section:active')
 						.siblings().removeClass('active');
-					// gotoActive($('#' + activeSection));
-					// console.log(activeSection)
+					if(activeSection.hasClass('lin')){
+						history.pushState(null, document.title, '#Jeremy Lin');
+					}
+					if(activeSection.hasClass('chen')){
+						history.pushState(null, document.title, '#Wei-Yin Chen');
+					}
+					if(activeSection.hasClass('lu')){
+						history.pushState(null, document.title, '#Rendy Lu');
+					}
 				}
 				scrollTop = currentTop;
 			});
@@ -221,7 +228,7 @@ app.partial.home = function(){
 				});
 			}
 		}
-		console.log(/rendy(\s|[%]20)lu/i.test(location.hash));
+		// console.log(/rendy(\s|[%]20)lu/i.test(location.hash));
 		if(/jeremy(\s|[%]20)lin/i.test(location.hash)){
 			$('article.lin').addClass('active').siblings().removeClass('active');
 			gotoActive($('article.lin'));
