@@ -204,13 +204,13 @@ app.partial.home = function(){
 				if(activeSection && !$('#' + activeSection).hasClass('active')){
 					$('#' + activeSection).addClass('active').trigger('section:active')
 						.siblings().removeClass('active');
-					if(activeSection.hasClass('lin')){
+					if($('#' + activeSection).hasClass('lin')){
 						history.pushState(null, document.title, '#Jeremy Lin');
 					}
-					if(activeSection.hasClass('chen')){
+					if($('#' + activeSection).hasClass('chen')){
 						history.pushState(null, document.title, '#Wei-Yin Chen');
 					}
-					if(activeSection.hasClass('lu')){
+					if($('#' + activeSection).hasClass('lu')){
 						history.pushState(null, document.title, '#Rendy Lu');
 					}
 				}
