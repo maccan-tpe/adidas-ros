@@ -7,6 +7,9 @@ header {
 	z-index: 10;
 	line-height: 75px;
 	// border-bottom: 1px solid #444;
+	@media screen and (max-width: #{$screen-xs - 1}) {
+		background-color: rgba(0,0,0,0.95);
+	}
 	.menu-bg{
 		@include SubItem();
 		position: fixed;

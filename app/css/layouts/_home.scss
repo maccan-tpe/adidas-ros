@@ -151,11 +151,12 @@
 				@include Item(700, 0, 138, 0, 0, 800, 1920, 'fit', 'absolute');
 				@media screen and (max-width: #{$screen-xs - 1}) {
 					@include Item(750, 0, 0, 0, 0, 0, 750,'fit','relative');
+					z-index: 3;
 				}
 				ul, .text{
 					@include Item(691, 0, 200, 0, 0, 130, 700, 'fit', 'absolute');
 					@media screen and (max-width: #{$screen-xs - 1}) {
-						@include Item(694, 0, 631, 0, 0, 0, 750,'fit','absolute');
+						@include Item(610, 0, 631, 0, 0, 0, 750,'fit','absolute');
 						height: auto;
 					}
 					height: auto;
@@ -240,10 +241,10 @@
 					}
 				}
 				ul, .text{
-					@include Item(937, 0, 194, 0, 0, 0, 700,'fit','absolute');
+					@include Item(978, 0, 194, 0, 0, 0, 700,'fit','absolute');
 					height: auto;
 					@media screen and (max-width: #{$screen-xs - 1}) {
-						@include Item(694, 0, 631, 0, 0, 0, 750,'fit','absolute');
+						@include Item(750, 0, 631, 0, 0, 0, 750,'fit','absolute');
 						height: auto;
 					}
 				}
@@ -276,7 +277,7 @@
 				}
 				.headline{
 					ul, .text{
-						@include Item(867, 0, 194, 0, 0, 0, 700,'fit','absolute');
+						@include Item(924, 0, 194, 0, 0, 0, 700,'fit','absolute');
 						height: auto;
 					}
 				}
@@ -309,7 +310,7 @@
 				}
 				.headline{
 					ul, .text{
-						@include Item(694, 0, 631, 0, 0, 0, 750,'fit','absolute');
+						@include Item(750, 0, 631, 0, 0, 0, 750,'fit','absolute');
 						height: auto;
 					}
 				}
