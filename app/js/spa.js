@@ -88,6 +88,11 @@ app.partial.spa = function(){
 	}
 
 	$(window).on('popstate', function(event){
+		if(/jeremy(\s|[%]20)lin/i.test(location.hash)||
+			/wei[-]yin(\s|[%]20)chen/i.test(location.hash)||
+			/rendy(\s|[%]20)lu/i.test(location.hash)){
+			return false;
+		}
 		var info = event.originalEvent.state;
 		// console.log('pop',info);
 		if(info === null){

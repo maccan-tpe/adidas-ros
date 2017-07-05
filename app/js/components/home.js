@@ -221,6 +221,19 @@ app.partial.home = function(){
 				});
 			}
 		}
+		console.log(/rendy(\s|[%]20)lu/i.test(location.hash));
+		if(/jeremy(\s|[%]20)lin/i.test(location.hash)){
+			$('article.lin').addClass('active').siblings().removeClass('active');
+			gotoActive($('article.lin'));
+		}
+		if(/wei[-]yin(\s|[%]20)chen/i.test(location.hash)){
+			$('article.chen').addClass('active').siblings().removeClass('active');
+			gotoActive($('article.chen'));
+		}
+		if(/rendy(\s|[%]20)lu/i.test(location.hash)){
+			$('article.lu').addClass('active').siblings().removeClass('active');
+			gotoActive($('article.lu'));
+		}
 	});
 
 	if($('#content.home').length){
