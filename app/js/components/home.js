@@ -9,14 +9,6 @@ app.partial.home = function(){
 	var container = $('#container');
 	container.on('page:update:home' , function(page, menu){
 		// $('.parallax').parallax();
-		if($(window).width() > 800){
-			anime({
-				targets: 'html,body',
-				easing: 'easeInOutExpo',
-				scrollTop: 0,
-				delay: 50
-			});
-		}
 		$('.parallax').each(function(idx, ele){
 			var parallax = new Parallax(ele);
 		});
@@ -114,14 +106,19 @@ app.partial.home = function(){
 		if(/jeremy(\s|[%]20)lin/i.test(location.hash)){
 			$('article.lin').addClass('active').siblings().removeClass('active');
 			gotoActive($('article.lin'));
-		}
-		if(/wei[-]yin(\s|[%]20)chen/i.test(location.hash)){
+		}else if(/wei[-]yin(\s|[%]20)chen/i.test(location.hash)){
 			$('article.chen').addClass('active').siblings().removeClass('active');
 			gotoActive($('article.chen'));
-		}
-		if(/rendy(\s|[%]20)lu/i.test(location.hash)){
+		}else if(/rendy(\s|[%]20)lu/i.test(location.hash)){
 			$('article.lu').addClass('active').siblings().removeClass('active');
 			gotoActive($('article.lu'));
+		}else if($(window).width() > 800){
+			anime({
+				targets: 'html,body',
+				easing: 'easeInOutExpo',
+				scrollTop: 0,
+				delay: 50
+			});
 		}
 	});
 
