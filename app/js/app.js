@@ -21,6 +21,9 @@ $(function(){
     });
     app.imageReload.init();
 
+	$(window).on('scroll resizeend', function(e){
+		$('#content').trigger('rolling', e);
+	});
 
     app.imageReload.callback = function(){
 			// console.log('preload callback');

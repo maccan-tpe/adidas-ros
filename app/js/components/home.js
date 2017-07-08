@@ -30,138 +30,9 @@ app.partial.home = function(){
 			}else{			
 				$('.home article aside.text').mCustomScrollbar('destroy');
 			}
-			// console.log('resize');
-
-			
-		// 	anime({
-		// 		targets: '.kv.active',
-		// 		opacity: function(){
-
-		// 			// anime({
-		// 			// 	targets: '.kv.active .here-to-create, .kv.active a.cfa, .kv.active .cfa-bg',
-		// 			// 	top: (vh - (vw * 1080 / 1920)),
-		// 			// 	duration: 1200
-		// 			// });
-		// 			anime({
-		// 				targets: 'footer',
-		// 				opacity: 0,
-		// 				easing: 'easeInOutExpo'
-		// 			});
-		// 			anime({
-		// 				targets: '#content >*:not(.kv)',
-		// 				opacity: 1,
-		// 				filter: 'blur(20px)',
-		// 				duration: 800,
-		// 				easing: 'easeInOutExpo'
-		// 			});
-		// 			return 1;
-		// 		},
-		// 		filter: 'none',
-		// 		duration: 800,
-		// 		easing: 'easeInOutExpo'
-		// 	});
-		// 	anime({
-		// 		targets: '.lin.active',
-		// 		opacity: function(){
-
-		// 			anime({
-		// 				targets: '#content >*:not(.lin)',
-		// 				opacity: 1,
-		// 				filter: 'blur(20px)',
-		// 				duration: 800,
-		// 				easing: 'easeInOutExpo'
-		// 			});
-		// 			anime({
-		// 				targets: 'footer',
-		// 				opacity: 0,
-		// 				easing: 'easeInOutExpo'
-		// 			});
-		// 			return 1;
-		// 		},
-		// 		duration: 800,
-		// 		easing: 'easeInOutExpo'
-		// 	});
-		// 	anime({
-		// 		targets: '.chen.active',
-		// 		opacity: function(){
-
-		// 			anime({
-		// 				targets: '#content >*:not(.chen)',
-		// 				opacity: 1,
-		// 				filter: 'blur(20px)',
-		// 				duration: 800,
-		// 				easing: 'easeInOutExpo'
-		// 			});
-		// 			anime({
-		// 				targets: 'footer',
-		// 				opacity: 0,
-		// 				easing: 'easeInOutExpo'
-		// 			});
-		// 			return vh;
-		// 		},
-		// 		duration: 800,
-		// 		easing: 'easeInOutExpo'
-		// 	});
-		// 	anime({
-		// 		targets: '.lu.active',
-		// 		opacity: function(){
-
-		// 			anime({
-		// 				targets: '#content >*:not(.lu)',
-		// 				opacity: 1,
-		// 				filter: 'blur(20px)',
-		// 				duration: 800,
-		// 				easing: 'easeInOutExpo'
-		// 			});
-		// 			anime({
-		// 				targets: 'footer',
-		// 				opacity: 1,
-		// 				easing: 'easeInOutExpo'
-		// 			});
-		// 			return 1;
-		// 		},
-		// 		duration: 800,
-		// 		easing: 'easeInOutExpo'
-		// 	});
 		});
 
 
-		// $('.kv').on('mousewheel', function(e){
-		// 	if(e.deltaY < -1){
-		// 		$('article.lin').addClass('active').siblings().removeClass('active');
-		// 		$('#content').trigger('resizeend');
-		// 	}
-		// });
-		// $('article.lin').on('mousewheel', function(e){
-		// 	if(e.deltaY > 1){
-		// 		$('.kv').addClass('active').siblings().removeClass('active');
-		// 		$('#content').trigger('resizeend');
-		// 	}
-		// 	if(e.deltaY < -1){
-		// 		$('article.chen').addClass('active').siblings().removeClass('active');
-		// 		$('#content').trigger('resizeend');
-		// 	}
-		// });
-		// $('article.chen').on('mousewheel', function(e){
-		// 	if(e.deltaY > 1){
-		// 		$('article.lin').addClass('active').siblings().removeClass('active');
-		// 		$('#content').trigger('resizeend');
-		// 	}
-		// 	if(e.deltaY < -1){
-		// 		$('article.lu').addClass('active').siblings().removeClass('active');
-		// 		$('#content').trigger('resizeend');
-		// 	}
-		// });
-		// $('article.lu').on('mousewheel', function(e){
-		// 	if(e.deltaY > 1){
-		// 		$('article.chen').addClass('active').siblings().removeClass('active');
-		// 		$('#content').trigger('resizeend');
-		// 	}
-		// });
-		// $('.kv, article.lin, article.chen, article.lu').on('mousemove', function(e){
-		// 	$(this).addClass('active').siblings().removeClass('active');
-		// 	// $('#content').trigger('resizeend');
-		// });
 
 		var range = {}, activeSection = null, scrollTop = 0;
 
@@ -190,7 +61,8 @@ app.partial.home = function(){
 		});
 
 
-		$(window).on('scroll resizeend', function(){
+
+		$('#content').on('rolling', function(e){
 			var currentTop = $(window).scrollTop() + $(window).height() / 3;
 			var currentButt = $(window).scrollTop() + $(window).height() / 3 * 2;
 			$('.kv, article.lin, article.chen, article.lu').each(function(i, section){
@@ -202,16 +74,17 @@ app.partial.home = function(){
 					}
 				} 
 				if(activeSection && !$('#' + activeSection).hasClass('active')){
+					console.log(activeSection);
 					$('#' + activeSection).addClass('active').trigger('section:active')
 						.siblings().removeClass('active');
 					if($('#' + activeSection).hasClass('lin')){
 						history.pushState(null, document.title, '#Jeremy Lin');
-					}
-					if($('#' + activeSection).hasClass('chen')){
+					}else if($('#' + activeSection).hasClass('chen')){
 						history.pushState(null, document.title, '#Wei-Yin Chen');
-					}
-					if($('#' + activeSection).hasClass('lu')){
+					}else if($('#' + activeSection).hasClass('lu')){
 						history.pushState(null, document.title, '#Rendy Lu');
+					}else{
+						history.pushState(null, document.title, './');
 					}
 				}
 				scrollTop = currentTop;
@@ -220,13 +93,14 @@ app.partial.home = function(){
 		
 		function gotoActive(to){
 			// console.log(to);
-			if($(window).width() > 800){
+			// if($(window).width() > 800){
 				anime({
 					targets: 'html,body',
 					easing: 'easeInOutExpo',
-					scrollTop: to.offset().top
+					scrollTop: to.offset().top,
+					delay: 1200
 				});
-			}
+			// }
 		}
 		// console.log(/rendy(\s|[%]20)lu/i.test(location.hash));
 		if(/jeremy(\s|[%]20)lin/i.test(location.hash)){

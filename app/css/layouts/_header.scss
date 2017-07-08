@@ -6,7 +6,8 @@ header {
 	height: 75px;
 	z-index: 10;
 	line-height: 75px;
-	// border-bottom: 1px solid #444;
+	padding-top: 1px;
+	
 	@media screen and (max-width: #{$screen-xs - 1}) {
 		background-color: rgba(0,0,0,0.95);
 		padding-top: per(110, 750);
@@ -24,18 +25,25 @@ header {
 	.menu{
 		// @include Item('auto', 'auto', 0, 90, 'auto', 'auto', 1920, 'fit', 'relative');
 		position: absolute;
+		height: 45px;
+		margin-top: per(30 ,1920);
+		z-index: 10;
+		line-height: 41px;
 		right: 90px;
 		top: 0;
-		letter-spacing: 45px;
+		letter-spacing: 0;
+		border-top: 1px solid #3a4549;
 		a{
 			letter-spacing: 1px;
 			letter-spacing: 0.1px;
 			position: relative;
+			min-height: 22px;
+			display: inline-block;
 			&:after{
 				position: absolute;
 				border-top: 4px solid #e1004a;
 				width: 0%;
-				top: -10px;
+				top: 0;
 				left: 100%;
 				left: calc(100% + 45px);
 				content: '';

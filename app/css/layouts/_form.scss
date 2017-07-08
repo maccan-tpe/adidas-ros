@@ -1,2 +1,308 @@
 .form{
+	@include SubItem();
+	overflow: auto;
+	@media screen and (max-width: #{$screen-xs - 1}) {
+		position: relative;
+		height: auto!important;;
+	}
+	.background,.shadow{
+		@include SubItem();
+	}
+	.background{
+		background-size: cover;
+		background-position: center;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			background-size: 100% auto;
+			background-position: center top;
+			background-repeat: no-repeat;
+		}
+	}
+	.shadow{
+		background-size: 100% 100%;
+		background-position: center;
+	}
+	.adidas{
+		@include Item(361, 645, 210, 1170, 0, 'auto', 1920,'fit','absolute');
+		background-size: cover;
+		background-position: center;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(530, 882, 124, 0, 0, 107, 750,'fit','absolute');
+			background-size: cover;
+			background-position: center;
+		}
+	}
+	article{
+		width: 1200px;
+		top: 0;
+		position: relative;
+		// margin: 0 0 0 per(914, 1920);
+		margin: 0 auto;
+		height: 100%;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(690, 146, 1114, 0, 0, 30, 750,'fit','relative');
+			height: auto;
+			padding: 0;
+		}
+		.text{
+			// @include SubItem();
+			width: 640px;
+			margin-left: 560px;
+			height: 100%;			
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				position: relative;
+				height: auto;
+				margin: 0 auto;
+				width: per(690, 750)
+			}
+			.cap{
+				color: #ff0054;
+				position: relative;
+				vertical-align: middle;
+				margin-left: 0;
+				margin-left: 0.19em;
+				font-weight: 600;
+				margin-top: em(60, 18);
+				&:first-child{
+					margin-top: em(200, 18);	
+				}
+			}
+			.subtitle{
+				color: #fff;
+				position: relative;
+				vertical-align: middle;
+				margin-left: 0;
+				margin-left: 0.19em;
+				font-weight: 600;
+				&:before{
+					position: absolute;
+					top:50%;
+					height: 1px;
+					content: '';
+					width: 0.6em;
+					left: -1.1em;					
+					background: rgba(255,255,255,0.2);
+					@media screen and (max-width: #{$screen-xs - 1}) {
+						display: none;
+					}
+				}
+				img{
+					margin-right: 0.6em;
+					@media screen and (max-width: #{$screen-xs - 1}) {
+						width: 0.6em;
+					}
+				}
+			}
+			p{
+				// margin-left: 5.1em;
+				line-height: 1.8em;
+				letter-spacing: 1px;
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					margin-left: 1em;
+				}
+
+			}
+			ul{
+				// margin-left: 11em;
+				padding-left: 1em;
+				position: relative;
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					margin-left: 0;
+					padding-left: 0;
+				}
+				&:before{
+					position: absolute;
+					content: '';
+					border-left:1px solid rgba(255,255,255,0.2);
+					width: 0;
+					height: 100%;
+					height: calc(100% - 1.7em);
+					left: 0;
+					top: 0.9em;
+					@media screen and (max-width: #{$screen-xs - 1}) {
+						display: none;
+					}
+				}
+				li{
+					margin-bottom: 2.5em;
+					p{
+						margin-left: em(52, 14);
+						@media screen and (max-width: #{$screen-xs - 1}) {
+							margin-left: em(35, 14);
+						}
+					}
+					p:last-child{
+						position: absolute;
+					}
+				}
+			}
+		}
+		h3{
+			margin-top: em(65, 24);
+			margin-bottom: em(30, 24);
+			img{
+				width: 100%;
+			}
+		}
+		form{			
+			padding-bottom: 400px;			
+			z-index: 10;
+			position: relative;
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				padding-bottom: 3em;
+			}
+			aside{
+				line-height: 20px;
+				padding: 0;
+
+				[type="text"],[type="email"],[type="date"]{
+					background: #999;
+					color: #000;
+					border: 0;
+					border-radius: 0;
+					font-weight: bold;
+					&:focus, &:hover, &:active{
+						box-shadow: none;
+						border: 0;
+					}
+					&:focus{
+						border: 1px solid #fff;
+					}
+				}
+				[type="checkbox"]{ 
+					&~label{
+						white-space: normal;
+						span{
+							display: inline-block;
+							width: 88%;
+							@media screen and (max-width: #{$screen-xs - 1}) {
+								width: calc(100% - 3em);
+							}
+						}
+					}
+					&~label i{
+
+						display: inline-block;
+						width: 1.8em;
+						height: 1.8em;
+						background: #999;
+						line-height: 2em;
+						margin-right: 0.5em;
+						color: transparent;
+						cursor: pointer;
+						&:before{
+							display: block;
+							text-align: center;
+						}
+					}
+					&:checked{
+						&~label i{
+							color: #fff;
+						}
+
+					}
+					&.red{
+						&~label{
+							white-space: nowrap;
+							span{
+								white-space: normal;
+								@media screen and (max-width: #{$screen-xs - 1}) {
+									width: auto;
+								}
+							}
+						}
+						&~label i{
+							width: 1.7em;
+							height: 1.7em;
+							border:1px solid #ff0054;
+							background: none;
+							line-height: 1.8em;
+							&:before{
+								display: block;
+								text-align: center;
+							}
+						}
+
+					}
+
+					&[disabled]{
+						&~label{
+							opacity: 0.6;
+							pointer-events: none;
+							i{
+								display: none;
+							}
+							span:after{
+								content:'(額滿)';
+							}
+							span{
+								width: 98%;
+							}
+						}
+					}
+				}
+				// ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				//   color: #000;
+				// 	font-weight: bold;
+				// }
+				// ::-moz-placeholder { Firefox 19+
+				//   color: #000;
+				// 	font-weight: bold;
+				// }
+				// :-ms-input-placeholder { /* IE 10+ */
+				//   color: #000;
+				// 	font-weight: bold;
+				// }
+				:placeholder { /* Firefox 18- */
+				  color: #000;
+					font-weight: bold;
+				}
+				button{
+					height: 64px;
+					font-size: 20px;
+					color: #fff;
+					border-radius: 0!important;
+					background: none!important;
+					border: 3px solid #ff0054;
+					box-shadow: none!important;
+				}
+
+			}
+			.row{
+				margin: 0 auto;
+
+				&.row{
+					margin-top: 18px;
+				}
+			}
+
+		}
+		.shadow-top, .shadow-butt{
+			background-size: 100% auto;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.shadow-top{
+			@include Item(1200, 186, 0, 0, 0, 0, 1200, 'fit', 'absolute');
+		}
+		.shadow-butt{
+			@include Item(1200, 238, 'auto', 0, 0, 0, 1200, 'fit', 'absolute');
+		}
+	}
+
+	.nowrap{
+		white-space: nowrap;
+	}
+}
+.bfh-datepicker {
+	color: #000;
+	border-radius: 0!important;
+	a{
+		color: #000;
+	}
+}
+.input-group-addon{
+	border-radius: 0!important;
+	background: #999;
+	border: 0;
+
 }

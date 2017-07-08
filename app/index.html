@@ -17,6 +17,7 @@
     <!-- build:css css/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="/vendor/bootstrap-formhelpers/dist/css/bootstrap-formhelpers.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -39,24 +40,21 @@
         <a href="http://www.adidas.com.tw/" target="_blank" data-ga="PC_adidas_LOGO" data-ga-m="Mobile_adidas_LOGO">
           <img data-src="img/logo.png" alt="adidas official website"></a>
       </h1>
-      <!-- <a class="close visible-xs" href="javascript:">
+      <a class="close visible-xs" href="javascript:">
           <figure class="x" data-src="img/close.png"></figure>
           <figure class="burg" data-src="img/burg.png"></figure></a>
-      <a class="fb visible-xs" href="https://www.facebook.com/adidasRunningTW/" target="_blank" data-ga-m="Mobile_FB">
-          <img data-src="img/fb@2x.png" alt="adidas official fanpage"></a> -->
-      <a class="fb hidden-xs" href="https://www.facebook.com/adidasRunningTW/" target="_blank" data-ga="PC_FB">
-          <img data-src="img/fb.png" alt="adidas official fanpage"></a>
-      <a class="fb1 visible-xs" href="https://www.facebook.com/adidasRunningTW/" target="_blank" data-ga-m="Mobile_FB">
-        <img data-src="img/fb@2x.png" alt="adidas official fanpage"></a>
+      <a class="fb" href="https://www.facebook.com/adidasRunningTW/" target="_blank" data-ga="PC_FB" data-ga-m="Mobile_FB">
+          <img class="visible-xs" data-src="img/fb@2x.png" alt="adidas official fanpage">
+          <img class="hidden-xs" data-src="img/fb.png" alt="adidas official fanpage"></a>
       <!--選單-->
       <figure class="visible-xs menu-bg" data-src="img/menu-bg@2x.png"></figure>
-      <nav class="menu fontsize-15 hide ">
+      <nav class="menu fontsize-15 ">
         <a class="active" href="javascript:" data-ref="home" data-href="./">
           <img  class="hidden-xs" alt="球星故事" data-src="img/nav-1.png">
           <img  class="visible-xs" alt="球星故事" data-src="img/nav-1@2x.png"></a>
-        <a href="javascript:" disabled data-ref="form" data-href="./form/">
-          <img  class="hidden-xs" alt="Sports Base 訓練" data-src="img/nav-2.png">
-          <img  class="visible-xs" alt="Sports Base 訓練" data-src="img/nav-2@2x.png"></a>
+        <a href="javascript:" data-ref="form" data-href="./form/">
+          <img  class="hidden-xs" alt="Sports Base 訓練課程" data-src="img/nav-2.png">
+          <img  class="visible-xs" alt="Sports Base 訓練課程" data-src="img/nav-2@2x.png"></a>
         <a href="javascript:" data-ref="rule" data-href="./rule/">
           <img  class="hidden-xs" alt="活動辦法" data-src="img/nav-3.png">
           <img  class="visible-xs" alt="活動辦法" data-src="img/nav-3@2x.png"></a>
@@ -66,7 +64,7 @@
     <section id="container" role="container">
 
       <section id="content" class="home" role="content">
-        <section class="kv active hide" data-ga-pv="PC_index" data-ga-pv-m="Mobile_index">
+        <section class="kv active" data-ga-pv="PC_index" data-ga-pv-m="Mobile_index">
           <figure class="background hidden-xs" data-src="img/home/kv-background.jpg">
             <figure class="here-to-create"><img data-src="img/home/here-to-create.png"></figure>
           </figure>
@@ -79,10 +77,9 @@
           </figure>
           <figure class="shadow hidden-xs" data-src="img/home/kv-inner-shadow.png"></figure>
           <figure class="text">
-            <img data-src="img/home/text.png"></figure>
+            <img data-src="img/home/text@2x.png"></figure>
           <a class="cfa" data-href="form/" data-ref="form" href="javascript:" data-ga="PC_go_0" data-ga-m="Mobile_go_0">
-            <figure class="adidas-sport-base"><img data-src="img/home/adidas-sport-base.png"></figure>
-            <figure class="cfa"><img data-src="img/home/cfa.png"></figure>
+            <figure class="cfa"><img data-src="img/home/cfa@2x.png"></figure>
           </a>
           <figure class="cfa-bg" data-src="img/home/cfa-bg.png">
             <img data-src="img/home/cfa-bg.png">
@@ -130,9 +127,8 @@
                   <p class="bold">正如他所說：「我得全力打出自己價值」、「學習成功前，必須先學會失敗」<!-- <br> -->林書豪不斷證明自己，弱者等待機會，強者創造機會。<!-- <br> -->Here to Create.</p>
                 </aside>
 
-                <a class="cfa hide" data-href="form/" data-ref="form" href="javascript:" data-ga="PC_GO_1" data-ga-m="mobile_GO_1">
-                  <figure class="adidas-sport-base"><img data-src="img/home/adidas-sport-base.png"></figure>
-                  <figure class="cfa"><img data-src="img/home/cfa.png"></figure>
+                <a class="cfa" data-href="form/" data-ref="form" href="javascript:" data-ga="PC_GO_1" data-ga-m="mobile_GO_1">
+                  <figure class="cfa"><img data-src="img/home/cfa@2x.png"></figure>
                 </a>
             </aside>
           </aside>
@@ -177,9 +173,8 @@
                   <p class="bold">說到等待，陳偉殷比任何人都深刻。<br>說到夢想，陳偉殷比多數人更堅持。<br><br>秉持一生懸命的陳偉殷，全力以赴，創造紀錄，闖進心中的大聯盟！<br>Here to Create.</p>
                 </aside>
 
-                <a class="cfa hide" data-href="form/" data-ref="form" href="javascript:" data-ga="PC_GO_2" data-ga-m="mobile_GO_2">
-                  <figure class="adidas-sport-base"><img data-src="img/home/adidas-sport-base.png"></figure>
-                  <figure class="cfa"><img data-src="img/home/cfa.png"></figure>
+                <a class="cfa" data-href="form/" data-ref="form" href="javascript:" data-ga="PC_GO_2" data-ga-m="mobile_GO_2">
+                  <figure class="cfa"><img data-src="img/home/cfa@2x.png"></figure>
                 </a>
             </aside>
           </aside>
@@ -224,9 +219,8 @@
                   <p class="bold">盧彥勳持續堅信：「我不去和別人比較，我要創造自己的歷史，繼續超越自己。」<br>唯有和自己競賽，才能不斷創造奇蹟。<br>Here to Create.</p>
                 </aside>
 
-                <a class="cfa hide" data-href="form/" data-ref="form" href="javascript:" data-ga="PC_GO_3" data-ga-m="mobile_GO_3">
-                  <figure class="adidas-sport-base"><img data-src="img/home/adidas-sport-base.png"></figure>
-                  <figure class="cfa"><img data-src="img/home/cfa.png"></figure>
+                <a class="cfa" data-href="form/" data-ref="form" href="javascript:" data-ga="PC_GO_3" data-ga-m="mobile_GO_3">
+                  <figure class="cfa"><img data-src="img/home/cfa@2x.png"></figure>
                 </a>
             </aside>
           </aside>
@@ -241,7 +235,7 @@
       <!-- <figure><img data-src="img/logo.png"></figure> -->
     </aside>
     
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!-- Google Analytics-->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -250,11 +244,19 @@
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-101859038-1');
     </script>
+    <script type="text/javascript" class="amnet_dmp_tag">
+      var amnet_i_src = 'pt.amnetgroup.com.tw/acjs/cyd_AdidasWomen.js';
+      var amnet_i_ct = document.createElement('script');
+      var src = (location.protocol == 'https:') ? 'https://' : 'http://';
+        amnet_i_ct.setAttribute('src',src+amnet_i_src); amnet_i_ct.charset = 'utf-8';
+      var amnet_i_cts = document.getElementsByTagName('script')[0];
+      amnet_i_cts.parentNode.insertBefore(amnet_i_ct, amnet_i_cts);
+    </script>
+
 
     <!-- build:js js/vendor.js -->
     <!-- bower:js -->
     <script src="/vendor/jquery/dist/jquery.js"></script>
-    <script src="/vendor/metadog/metadog.js"></script>
     <script src="/vendor/parallax/deploy/parallax.js"></script>
     <script src="/vendor/parallax/deploy/parallax.min.js"></script>
     <script src="/vendor/parallax/deploy/jquery.parallax.js"></script>
@@ -263,6 +265,7 @@
     <script src="/vendor/jquery-mousewheel/jquery.mousewheel.js"></script>
     <script src="/vendor/jquery.resizeend/dist/jquery.resizeend.js"></script>
     <script src="/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+    <script src="/vendor/bootstrap-formhelpers/dist/js/bootstrap-formhelpers.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     

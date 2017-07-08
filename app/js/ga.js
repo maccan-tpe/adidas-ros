@@ -8,7 +8,7 @@
 app.partial.ga = function(){
 	var ismobile = $('html').hasClass('mobile') || $('html').hasClass('tablet');
 	if(ismobile){
-		$('a[data-ga-m]').on('click', function(e){
+		$('[data-ga-m]').on('click', function(e){
 			ga('send', 'event', 'Button', 'click', $(this).attr('data-ga-m'));
 		});
 		$('.kv, article.lin, article.chen, article.lu').on('section:active', function(){
@@ -17,8 +17,17 @@ app.partial.ga = function(){
 				// $(this).attr('data-ga-send', 1);
 			}
 		});
+		$('#container').on('page:update:form', function(){
+			ga('send', 'pageview', { 'page': 'PC_info', 'title': 'mobile_info'});
+		});
+		$('#container').on('page:update:rule', function(){
+			ga('send', 'pageview', { 'page': 'mobile_rules', 'title': 'mobile_rules'});
+		});
+		$('#container').on('page:update:home', function(){
+			ga('send', 'pageview', { 'page': 'Mobile_index', 'title': 'Mobile_index'});
+		});
 	}else{
-		$('a[data-ga]').on('click', function(e){
+		$('[data-ga]').on('click', function(e){
 			$(this).attr('data-ga');
 			ga('send', 'event', 'Button', 'click', $(this).attr('data-ga'));
 		});
@@ -28,6 +37,15 @@ app.partial.ga = function(){
 				ga('send', 'pageview', { 'page': $(this).attr('data-ga-pv'), 'title': $(this).attr('data-ga-pv')});
 				// $(this).attr('data-ga-send', 1);
 			}
+		});
+		$('#container').on('page:update:form', function(){
+			ga('send', 'pageview', { 'page': 'PC_info', 'title': 'PC_info'});
+		});
+		$('#container').on('page:update:rule', function(){
+			ga('send', 'pageview', { 'page': 'PC_rules', 'title': 'PC_rules'});
+		});
+		$('#container').on('page:update:home', function(){
+			ga('send', 'pageview', { 'page': 'PC_index', 'title': 'PC_index'});
 		});
 
 	}

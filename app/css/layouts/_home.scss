@@ -31,9 +31,9 @@
 		}
 
 		.here-to-create{
-			@include Item(429, 371, 217, 0, 0, 157, 1920, 'fit', 'absolute');
+			@include Item(328, 419, 227, 0, 0, 188, 1920, 'fit', 'absolute');
 			@media screen and (max-width: #{$screen-xs - 1}) {
-				@include Item(389, 335, 103, 0, 0, 117, 750,'fit','absolute');
+				@include Item(283, 360, 44, 0, 0, 233, 750,'fit','absolute');
 				margin-top: 13vh;
 				margin-top: calc(30vh - 25vw);
 			}
@@ -43,41 +43,14 @@
 			}
 		}
 
-		.cfa-bg{
-			@include Item(536, 355, 511, 0, 0, 229, 1920, 'fit', 'absolute');
-			background-position: center;
-			background-size: cover;
-			z-index: 1;
-			opacity: 0.95;
-			transform: rotateZ(1deg) scale(0.99);
-			transition-duration: 2s;
-			img{
-				transform: rotateZ(0deg) scale(0.8);
-				@include SubItem();
-				-webkit-mask: url(../img/urban-sprite.png);
-						mask: url(../img/urban-sprite.png);
-				-webkit-mask-size: 3000% 100%;
-						mask-size: 3000% 100%;
-				-webkit-animation: mask-play 3s steps(29) forwards;
-						animation: mask-play 3s steps(29) forwards;
-
-			}
-		}
 
 		a.cfa{
-			@include Item(508, 130, 616, 0, 0, 173, 1920, 'fit', 'absolute');
+			@include Item(279, 58, 689, 0, 0, 217, 1920, 'fit', 'absolute');
 			@media screen and (max-width: #{$screen-xs - 1}) {
-				@include Item(692, 158, 'auto', 0, 162, 29, 750,'fit','absolute');
-			}
-			.adidas-sport-base{
-				@include Item(129, 130, 0, 0, 0, 0, 508, 'fit', 'absolute');
-				img{
-					@include SubItem();
-				}
-
+				@include Item(369, 77, 'auto', 0, 195, 192, 750,'fit','absolute');
 			}
 			.cfa{
-				@include Item(375, 64, 25, 0, 0, 133, 508, 'fit', 'absolute');
+				@include SubItem();
 				img{
 					@include SubItem();
 				}
@@ -94,9 +67,9 @@
 		}
 
 		.text{
-			@include Item(439, 125, 705, 0, 0, 282, 1920, 'fit', 'absolute');
+			@include Item(367, 125, 749, 0, 0, 172, 1920, 'fit', 'absolute');
 			@media screen and (max-width: #{$screen-xs - 1}) {
-				@include Item(564, 141, 'auto', 0, 74, 177, 750,'fit','absolute');
+				@include Item(470, 142, 'auto', 0, 58, 135, 750,'fit','absolute');
 			}
 			img{
 				@include SubImgW();
@@ -154,7 +127,7 @@
 					z-index: 3;
 				}
 				ul, .text{
-					@include Item(691, 0, 200, 0, 0, 130, 700, 'fit', 'absolute');
+					@include Item(590, 0, 200, 0, 0, 130, 700, 'fit', 'absolute');
 					@media screen and (max-width: #{$screen-xs - 1}) {
 						@include Item(610, 0, 631, 0, 0, 0, 750,'fit','absolute');
 						height: auto;
@@ -180,19 +153,12 @@
 			}
 		}
 		a.cfa{
-			@include Item(508, 130, 480, 0, 0, 0, 570, 'fit', 'absolute');
+			@include Item(279, 58, 490, 0, 0, 0, 570, 'fit', 'absolute');
 			@media screen and (max-width: #{$screen-xs - 1}) {
-				@include Item(692, 158, 'auto', 0, 111, 30, 750,'fit','absolute');
-			}
-			.adidas-sport-base{
-				@include Item(129, 130, 0, 0, 0, 0, 508, 'fit', 'absolute');
-				img{
-					@include SubItem();
-				}
-
+				@include Item(369, 77, 'auto', 0, 80, 190, 750,'fit','absolute');
 			}
 			.cfa{
-				@include Item(375, 64, 25, 0, 0, 133, 508, 'fit', 'absolute');
+				@include SubItem();
 				img{
 					@include SubItem();
 				}
@@ -249,6 +215,12 @@
 					}
 				}
 			}
+			a.cfa{
+				@include Item(279, 58, 550, 0, 0, 0, 570, 'fit', 'absolute');
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					@include Item(369, 77, 'auto', 0, 30, 190, 750,'fit','absolute');
+				}
+			}
 		}
 		&.chen{
 			@include Item(1920, 1353, -156, 0, 0, 0, 1920, 'fit', 'relative');
@@ -280,6 +252,9 @@
 						@include Item(924, 0, 194, 0, 0, 0, 700,'fit','absolute');
 						height: auto;
 					}
+				}
+				a.cfa{
+					@include Item(279, 58, 620, 0, 0, 0, 570, 'fit', 'absolute');
 				}
 			}
 			.viewport{
@@ -313,6 +288,9 @@
 						@include Item(750, 0, 631, 0, 0, 0, 750,'fit','absolute');
 						height: auto;
 					}
+				}
+				a.cfa{
+					@include Item(369, 77, 'auto', 0, 170, 190, 750,'fit','absolute');
 				}
 			}
 

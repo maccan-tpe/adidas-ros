@@ -17,6 +17,7 @@
     <!-- build:css ../css/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="/vendor/bootstrap-formhelpers/dist/css/bootstrap-formhelpers.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -54,35 +55,185 @@
         <a href="javascript:" data-ref="home" data-href="../">
           <img  class="hidden-xs" alt="球星故事" data-src="../img/nav-1.png">
           <img  class="visible-xs" alt="球星故事" data-src="../img/nav-1@2x.png"></a>
-        <a class="active" href="javascript:" data-ref="form" data-href="../">
-          <img  class="hidden-xs" alt="Sports Base 訓練" data-src="../img/nav-2.png">
-          <img  class="visible-xs" alt="Sports Base 訓練" data-src="../img/nav-2@2x.png"></a>
-        <a href="javascript:"  data-ref="rule" data-href="./rule/">
+        <a class="active" href="javascript:" data-ref="form" data-href="./">
+          <img  class="hidden-xs" alt="Sports Base 訓練課程" data-src="../img/nav-2.png">
+          <img  class="visible-xs" alt="Sports Base 訓練課程" data-src="../img/nav-2@2x.png"></a>
+        <a href="javascript:"  data-ref="../rule" data-href="./">
           <img  class="hidden-xs" alt="活動辦法" data-src="../img/nav-3.png">
           <img  class="visible-xs" alt="活動辦法" data-src="../img/nav-3@2x.png"></a>
       </nav>
       <!--./選單-->
+    </header>
     <section id="container" role="container">
 
       <section id="content" class="form" role="content">
-        <form class="row">
-          <aside class="col-xs-12">
+        <figure class="background hidden-xs" data-src="../img/form/background.jpg"></figure>
+        <figure class="background visible-xs" data-src="../img/form/background@2x.jpg"></figure>
+        <figure class="shadow hidden-xs" data-src="../img/rule/shadow.png"></figure>
+        <figure class="adidas hidden-xs" data-src="../img/form/form-bg.png"></figure>
+        <figure class="adidas visible-xs" data-src="../img/form/form-bg@2x.png"></figure>
+        <article>
+            <aside class="text fontsize-sm-30">
+                <p class="cap fontsize-18">【第一場活動】</p>
+                <ul>
+                    <li>
+                        <p class="subtitle fontsize-14"><img data-src="../img/form/list-arrow.png">活動內容</p>
+                        <p>包包包包含高強度訓練活動， 每一場各抽出六百位參加者，報名訓練課程即可抽Here To Create 專屬紀念T-shirt，參加者還有機會獲得限量簽名球！！</p>
+                        <p class="subtitle fontsize-14"><img data-src="../img/form/list-arrow.png">活動時間</p>
+                        <p>2017年7月14日~ 2017年7月9日</p>
+                        <p class="subtitle fontsize-14"><img data-src="../img/form/list-arrow.png">名單公布時間</p>
+                        <p>2017年7月11日</p>
+                    </li>
+                </ul>
+                <p class="cap fontsize-18">【第二場活動】</p>
+                <ul>
+                    <li>
+                        <p class="subtitle fontsize-14"><img data-src="../img/form/list-arrow.png">活動內容</p>
+                        <p>包包包包含高強度訓練活動， 每一場各抽出六百位參加者，報名訓練課程即可抽Here To Create 專屬紀念T-shirt，參加者還有機會獲得限量簽名球！！</p>
+                        <p class="subtitle fontsize-14"><img data-src="../img/form/list-arrow.png">活動時間</p>
+                        <p>2017年7月14日~ 2017年7月9日</p>
+                        <p class="subtitle fontsize-14"><img data-src="../img/form/list-arrow.png">名單公布時間</p>
+                        <p>2017年7月11日</p>
+                    </li>
+                </ul>
+                <h3><img class="hidden-xs" src="../img/form/h3.png"><img class="visible-xs" src="../img/form/h3@2x.png"></h3>
+                <form >
+                  <div class="row">
+                    <aside class="text-right fontsize-16 col-xs-3 vertical-middle nowrap">
+                      <label for="name">姓名：</label>
+                    </aside>
+                    <aside class="col-md-7 col-xs-9 vertical-middle nowrap">
+                      <input type="text" class="form-control" name="name">
+                    </aside>
+                  </div>
+                  <div class="row">
+                    <aside class="text-right fontsize-16 col-xs-3 vertical-middle nowrap">
+                      <label for="age">生日：</label>
+                    </aside>
+                    <aside class="col-md-7 col-xs-9 vertical-middle nowrap">
+                      <div class="bfh-datepicker" data-class="form-control" data-name="age" data-date="1995/7/14" data-format="y/m/d" data-min="1995/07/14" data-max="2003/07/14"></div>
+                    </aside>
+                  </div>
+                  <div class="row">
+                    <aside class="text-right fontsize-16 col-xs-3 vertical-middle nowrap">
+                      <label for="tel">手機號碼：</label>
+                    </aside>
+                    <aside class="col-md-7 col-xs-9 vertical-middle nowrap">
+                      <input type="text" class="form-control" name="tel" placeholder="連絡電話請留手機號碼，屆時會以簡訊通知活動訊息">
+                    </aside>
+                  </div>
+                  <div class="row">
+                    <aside class="text-right fontsize-16 col-xs-3 vertical-middle nowrap">
+                      <label for="email">Email：</label>
+                    </aside>
+                    <aside class="col-md-7 col-xs-9 vertical-middle nowrap">
+                      <input type="email" required class="form-control" name="email">
+                    </aside>
+                  </div>
+                  <div class="row">
+                    <aside class="text-right fontsize-16 col-xs-3 vertical-middle nowrap">
+                      <label for="age">報名場次：<br><sub>(可複選)</sub></label>
+                    </aside>
+                    <aside class="col-md-7 col-xs-9 vertical-middle nowrap">
+                      <input id="session1" class="form-control hide" name="session" type="checkbox" value="1">
+                      <label class="vertical-middle" for="session1">
+                        <i class="fa fa-check"></i><span>2017年7月18日(二) 19:00 – 20:00 Energy Up 網球專項體能訓練</span>
+                      </label>
+                    </aside>
+                  </div>
+                  <div class="row">
+                    <aside class="col-md-7 col-xs-9 col-xs-offset-3 vertical-middle nowrap">
+                      <input id="session2" class="form-control hide" name="session" type="checkbox" value="2">
+                      <label class="vertical-middle" for="session2">
+                        <i class="fa fa-check"></i><span>2017年7月18日(二) 20:30 – 21:30 Energy Up 網球專項體能訓練</span>
+                      </label>
+                    </aside>
+                  </div>
+                  <div class="row">
+                    <aside class="col-md-7 col-xs-9 col-xs-offset-3 vertical-middle nowrap">
+                      <input id="session3" class="form-control hide" name="session" type="checkbox" value="3">
+                      <label class="vertical-middle" for="session3">
+                        <i class="fa fa-check"></i><span>2017年7月22日(六) 15:30 – 16:30 Level Up 籃球專項體能訓練</span>
+                      </label>
+                    </aside>
+                  </div>
+                  <div class="row">
+                    <aside class="col-md-7 col-xs-9 col-xs-offset-3 vertical-middle nowrap">
+                      <input id="session4" class="form-control hide" name="session" type="checkbox" value="4">
+                      <label class="vertical-middle" for="session4">
+                        <i class="fa fa-check"></i><span>2017年7月22日(六) 17:00 – 18:00 Level Up 籃球專項體能訓練</span>
+                      </label>
+                    </aside>
+                  </div>
+                  <div class="row">
+                    <aside class="col-md-7 col-xs-9 col-xs-offset-3 vertical-middle nowrap">
+                      <input id="session5" class="form-control hide" name="session" type="checkbox" value="5">
+                      <label class="vertical-middle" for="session5">
+                        <i class="fa fa-check"></i><span>2017年7月24日(一) 19:00 – 20:00 Power Up 棒球專項體能訓練</span>
+                      </label>
+                    </aside>
+                  </div>
+                  <div class="row">
+                    <aside class="col-md-7 col-xs-9 col-xs-offset-3 vertical-middle nowrap">
+                      <input id="session6" class="form-control hide" name="session" type="checkbox" value="6">
+                      <label class="vertical-middle" for="session6">
+                        <i class="fa fa-check"></i><span>2017年7月24日(一) 20:30 – 21:30 Power Up 棒球專項體能訓練</span>
+                      </label>
+                    </aside>
+                  <div class="row">
+                  &nbsp;
+                  </div>
+                  <div class="row">
+                  &nbsp;
+                  </div>
+                  <div class="row">
+                    <aside class="col-md-7 col-xs-12 col-md-offset-3 vertical-middle nowrap">
+                      <input id="agree" class="form-control hide red" name="agree" type="checkbox">
+                      <label class="vertical-middle" for="agree">
+                        <i class="fa fa-check"></i><span>我已詳閱並同意個資法與活動辦法</span>
+                      </label>
+                    </aside>
+                  </div>
+                  <div class="row">
+                    <aside class="col-md-7 col-xs-12 col-md-offset-3 vertical-middle nowrap">
+                      <button data-ga="PC_send" data-ga-m="mobile_send" class="form-control">送出報名<i class="chevron-right"></i></button>
+                    </aside>
+                  </div>
 
-          </aside>
-        </form>
+                </form>
+            </aside>
+            <figure class="shadow-top hidden-xs" data-src="../img/rule/shadow-top.png"></figure>
+            <figure class="shadow-butt hidden-xs" data-src="../img/rule/shadow-butt.png"></figure>
+        </article>
       </section>
 
     </section>
-    <footer>
+    <footer class="hide">
       <p>ALL RIGHTS RESERVED &copy;</p>
     </footer>
     <aside class="loading-mask vertical-middle text-center">
-      <figure><img data-src="img/logo.svg"></figure>
+      <figure><img data-src="../img/logo.svg"></figure>
     </aside>
+    <!-- Google Analytics-->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-101859038-1');
+    </script>
+    <script type="text/javascript" class="amnet_dmp_tag">
+      var amnet_i_src = 'pt.amnetgroup.com.tw/acjs/cyd_AdidasWomen.js';
+      var amnet_i_ct = document.createElement('script');
+      var src = (location.protocol == 'https:') ? 'https://' : 'http://';
+        amnet_i_ct.setAttribute('src',src+amnet_i_src); amnet_i_ct.charset = 'utf-8';
+      var amnet_i_cts = document.getElementsByTagName('script')[0];
+      amnet_i_cts.parentNode.insertBefore(amnet_i_ct, amnet_i_cts);
+    </script>
     <!-- build:js ../js/vendor.js -->
     <!-- bower:js -->
     <script src="/vendor/jquery/dist/jquery.js"></script>
-    <script src="/vendor/metadog/metadog.js"></script>
     <script src="/vendor/parallax/deploy/parallax.js"></script>
     <script src="/vendor/parallax/deploy/parallax.min.js"></script>
     <script src="/vendor/parallax/deploy/jquery.parallax.js"></script>
@@ -91,6 +242,7 @@
     <script src="/vendor/jquery-mousewheel/jquery.mousewheel.js"></script>
     <script src="/vendor/jquery.resizeend/dist/jquery.resizeend.js"></script>
     <script src="/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+    <script src="/vendor/bootstrap-formhelpers/dist/js/bootstrap-formhelpers.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
@@ -108,6 +260,7 @@
 
     <!-- build:js ../js/components.js -->
     <script src="../js/components/home.js"></script>
+    <script src="../js/components/rule.js"></script>
     <script src="../js/components/form.js"></script>
     <!-- endbuild -->
 

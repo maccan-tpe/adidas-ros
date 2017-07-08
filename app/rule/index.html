@@ -17,6 +17,7 @@
     <!-- build:css ../css/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="/vendor/bootstrap-formhelpers/dist/css/bootstrap-formhelpers.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -55,8 +56,8 @@
           <img  class="hidden-xs" alt="球星故事" data-src="../img/nav-1.png">
           <img  class="visible-xs" alt="球星故事" data-src="../img/nav-1@2x.png"></a>
         <a href="javascript:" data-ref="form" data-href="../form/">
-          <img  class="hidden-xs" alt="Sports Base 訓練" data-src="../img/nav-2.png">
-          <img  class="visible-xs" alt="Sports Base 訓練" data-src="../img/nav-2@2x.png"></a>
+          <img  class="hidden-xs" alt="Sports Base 訓練課程" data-src="../img/nav-2.png">
+          <img  class="visible-xs" alt="Sports Base 訓練課程" data-src="../img/nav-2@2x.png"></a>
         <a class="active" href="javascript:"  data-ref="rule" data-href="./">
           <img  class="hidden-xs" alt="活動辦法" data-src="../img/nav-3.png">
           <img  class="visible-xs" alt="活動辦法" data-src="../img/nav-3@2x.png"></a>
@@ -125,13 +126,13 @@
       </section>
 
     </section>
-    <footer class="fade in">
+    <footer class="hide">
       <p>ALL RIGHTS RESERVED &copy;</p>
     </footer>
     <aside class="loading-mask vertical-middle text-center">
       <figure><img data-src="../img/logo.svg"></figure>
     </aside>
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!-- Google Analytics-->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -140,11 +141,17 @@
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-101859038-1');
     </script>
-
+    <script type="text/javascript" class="amnet_dmp_tag">
+      var amnet_i_src = 'pt.amnetgroup.com.tw/acjs/cyd_AdidasWomen.js';
+      var amnet_i_ct = document.createElement('script');
+      var src = (location.protocol == 'https:') ? 'https://' : 'http://';
+        amnet_i_ct.setAttribute('src',src+amnet_i_src); amnet_i_ct.charset = 'utf-8';
+      var amnet_i_cts = document.getElementsByTagName('script')[0];
+      amnet_i_cts.parentNode.insertBefore(amnet_i_ct, amnet_i_cts);
+    </script>
     <!-- build:js ../js/vendor.js -->
     <!-- bower:js -->
     <script src="/vendor/jquery/dist/jquery.js"></script>
-    <script src="/vendor/metadog/metadog.js"></script>
     <script src="/vendor/parallax/deploy/parallax.js"></script>
     <script src="/vendor/parallax/deploy/parallax.min.js"></script>
     <script src="/vendor/parallax/deploy/jquery.parallax.js"></script>
@@ -153,6 +160,7 @@
     <script src="/vendor/jquery-mousewheel/jquery.mousewheel.js"></script>
     <script src="/vendor/jquery.resizeend/dist/jquery.resizeend.js"></script>
     <script src="/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+    <script src="/vendor/bootstrap-formhelpers/dist/js/bootstrap-formhelpers.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
