@@ -61,6 +61,12 @@ app.partial.form = function(){
 						if(d.vacancy == 0){
 							$('#session' + d.no).attr('disabled','disabled');
 						}
+						if(new Date()*1 >= new Date('2017-7-14 12:00')*1){
+							$('#session1, #session2').attr('disabled','disabled');
+						}
+						if(new Date()*1 >= new Date('2017-7-19 23:59')*1){
+							$('#session3, #session4, #session5, #session6').attr('disabled','disabled');
+						}
 					});
 				}
 			}).catch(function(e){
@@ -80,7 +86,7 @@ app.partial.form = function(){
 				name: $('[name=name]').val(),
 				'session[]': sessions.join(',')
 			};
-			console.log(form);
+			// console.log(form);
 			if(!$('[name=agree]:checked').length){
 				alert('請勾選確認詳閱並同意個資法與活動辦法');
 				return false;
