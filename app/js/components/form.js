@@ -123,7 +123,7 @@ app.partial.form = function(){
 				if(r.success == 1){
 					alert('恭喜您已完成報名');
 				}else{
-					alert(r.msg);
+					alert(r.msg.replace('抱歉，僅開放有限的年齡層參與', '請確認您符合報名資格。'));
 				}
 			});
 		});
