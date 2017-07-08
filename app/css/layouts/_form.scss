@@ -149,12 +149,14 @@
 			position: relative;
 			@media screen and (max-width: #{$screen-xs - 1}) {
 				padding-bottom: 3em;
+				font-size: em(16, 14);
 			}
 			aside{
 				line-height: 20px;
 				padding: 0;
 
 				[type="text"],[type="email"],[type="date"]{
+					font-size: 1em;
 					background: #999;
 					color: #000;
 					border: 0;
