@@ -21,7 +21,7 @@ app.partial.form = function(){
 					delay: 50
 				});
 				$('.bfh-datepicker').removeClass('hide');
-				$('.bfh-datepicker .input-group').append($('[name=age]').attr('type','text'))
+				$('.bfh-datepicker .input-group').append($('[name=age]').attr('type','text'));
 				$('.bfh-datepicker').bfhdatepicker($('.bfh-datepicker').data());
 			}else{
 				$('[name=age]').attr('type','date').insertAfter($('.bfh-datepicker').addClass('hide'));
