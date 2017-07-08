@@ -4,6 +4,7 @@
 	@media screen and (max-width: #{$screen-xs - 1}) {
 		position: relative;
 		height: auto!important;;
+		font-size: 1.4em;
 	}
 	.background,.shadow{
 		@include SubItem();
@@ -151,13 +152,13 @@
 			position: relative;
 			@media screen and (max-width: #{$screen-xs - 1}) {
 				padding-bottom: 3em;
-				font-size: em(16, 14);
 			}
 			aside{
 				line-height: 20px;
 				padding: 0;
 				label{
 					font-weight: normal;
+					float: right;
 				}
 				[type="text"],[type="email"],[type="date"]{
 					font-size: 1em;

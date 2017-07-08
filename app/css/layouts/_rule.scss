@@ -28,6 +28,9 @@
 		margin: 0 0 0 per(360, 1920);
 		height: 100%;
 		@media screen and (max-width: #{$screen-xs - 1}) {
+			font-size: 1.4em;
+		}
+		@media screen and (max-width: #{$screen-xs - 1}) {
 			@include Item(690, 146, 0, 0, 0, 30, 750,'fit','relative');
 			height: auto;
 		}
