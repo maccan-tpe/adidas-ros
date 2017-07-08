@@ -25,6 +25,7 @@
 		@include Item(361, 645, 210, 1170, 0, 'auto', 1920,'fit','absolute');
 		background-size: cover;
 		background-position: center;
+		z-index: 5;
 		@media screen and (max-width: #{$screen-xs - 1}) {
 			@include Item(530, 882, 124, 0, 0, 107, 750,'fit','absolute');
 			background-size: cover;
@@ -32,6 +33,7 @@
 		}
 	}
 	article{
+		font-size: 1.15em;
 		width: 1200px;
 		top: 0;
 		position: relative;
@@ -154,7 +156,9 @@
 			aside{
 				line-height: 20px;
 				padding: 0;
-
+				label{
+					font-weight: normal;
+				}
 				[type="text"],[type="email"],[type="date"]{
 					font-size: 1em;
 					background: #999;
@@ -169,11 +173,27 @@
 					&:focus{
 						border: 1px solid #fff;
 					}
+					&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+					  color: #000;
+						font-weight: bold;
+					}
+					&::-moz-placeholder { /*Firefox 19+ */
+					  color: #000;
+						font-weight: bold;
+					}
+					&:-ms-input-placeholder { /* IE 10+ */
+					  color: #000;
+						font-weight: bold;
+					}
+					&:-moz-placeholder { /* Firefox 18- */
+					  color: #000;
+						font-weight: bold;
+					}
 				}
 				[type="radio"]{ 
 					&~label{
-						white-space: normal;
 						span{
+							white-space: normal;
 							display: inline-block;
 							width: 88%;
 							@media screen and (max-width: #{$screen-xs - 1}) {
@@ -242,22 +262,6 @@
 						}
 					}
 				}
-				::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-				  color: #000;
-					font-weight: bold;
-				}
-				::-moz-placeholder { Firefox 19+
-				  color: #000;
-					font-weight: bold;
-				}
-				:-ms-input-placeholder { /* IE 10+ */
-				  color: #000;
-					font-weight: bold;
-				}
-				:placeholder { /* Firefox 18- */
-				  color: #000;
-					font-weight: bold;
-				}
 				button{
 					height: 64px;
 					font-size: 20px;
@@ -275,6 +279,9 @@
 				&.row{
 					margin-top: 18px;
 				}
+			}
+			a{
+				text-decoration: underline;
 			}
 
 		}
@@ -307,4 +314,7 @@
 	background: #999;
 	border: 0;
 
+}
+.mCSB_draggerContainer{
+	transform: scaleY(0.6) translateY(2%);
 }
