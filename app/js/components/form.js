@@ -107,8 +107,8 @@ app.partial.form = function(){
 				alert('請填寫姓名');
 				return false;
 			}
-			if(!form.sessions){
-				alert('至少選擇一個場次');
+			if(!form.session){
+				alert('請選擇一個場次');
 				return false;
 			}
 
