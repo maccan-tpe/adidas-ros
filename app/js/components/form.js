@@ -99,6 +99,7 @@ app.partial.form = function(){
 				}).promise().catch(function(e){
 					console.log(e);
 				}).done(function(r){
+					console.log(r);
 					if(r.success == 1){
 						alert('恭喜您已完成報名');
 					}else{

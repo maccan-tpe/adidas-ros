@@ -105,6 +105,7 @@
 				// margin-left: 11em;
 				padding-left: 1em;
 				position: relative;
+				margin-bottom: em(260, 14);
 				@media screen and (max-width: #{$screen-xs - 1}) {
 					margin-left: 0;
 					padding-left: 0;
@@ -137,7 +138,6 @@
 			}
 		}
 		h3{
-			margin-top: em(65, 24);
 			margin-bottom: em(30, 24);
 			img{
 				width: 100%;
