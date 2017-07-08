@@ -17,8 +17,10 @@ app.partial.form = function(){
 				scrollTop: 0,
 				delay: 50
 			});
+			$('.bfh-datepicker').removeClass('hide').append($('[name=age]').attr('type','text')).bfhdatepicker($('.bfh-datepicker').data());
+		}else{
+			$('[name=age]').attr('type','date').insertAfter($('.bfh-datepicker').addClass('hide'));
 		}
-		$('.bfh-datepicker').bfhdatepicker($('.bfh-datepicker').data());
 		$('#content').on('resizeend', 500, function(e){
 			e.stopPropagation();
 			e.preventDefault();
@@ -76,15 +78,15 @@ app.partial.form = function(){
 		$('form').on('submit', function(e){
 			e.stopPropagation();
 			e.preventDefault();
-			var sessions = [];
-			var attr = 'session[]';
-			$('[name=session]:checked').each(function(i,d){sessions.push(d.value); });
+			// var sessions = [];
+			// var attr = 'sessions';
+			// $('[name=session]:checked').each(function(i,d){sessions.push(d.value); });
 			var form = {
 				age: JSON.stringify(new Date($('[name=age]').val())).replace(/["]/g,''),
 				email: $('[name=email]').val(),
 				tel: $('[name=tel]').val(),
 				name: $('[name=name]').val(),
-				'session[]': sessions.join(',')
+				session: $('[name=session]:checked').val()
 			};
 			// console.log(form);
 			if(!$('[name=agree]:checked').length){
@@ -103,7 +105,7 @@ app.partial.form = function(){
 				alert('請填寫姓名');
 				return false;
 			}
-			if(!form[attr]){
+			if(!form.sessions){
 				alert('至少選擇一個場次');
 				return false;
 			}

@@ -107,7 +107,9 @@
                       <label for="age">生日：</label>
                     </aside>
                     <aside class="col-md-7 col-xs-9 vertical-middle nowrap">
-                      <div class="bfh-datepicker" data-class="form-control" data-name="age" data-date="1995/7/14" data-format="y/m/d" data-min="1995/07/14" data-max="2003/07/14"></div>
+                      <div class="bfh-datepicker" data-class="form-control" data-name="age" data-date="1995/7/14" data-format="y/m/d" data-min="1995/07/14" data-max="2003/07/14">
+                        <input type="text" name="age" class="form-control" max="2003-07-14" min="2003-07-14" placeholder="選擇日期" readonly="">
+                      </div>
                     </aside>
                   </div>
                   <div class="row">
@@ -128,10 +130,10 @@
                   </div>
                   <div class="row">
                     <aside class="text-right fontsize-16 col-xs-3 vertical-middle nowrap">
-                      <label for="age">報名場次：<br><sub>(可複選)</sub></label>
+                      <label for="age">報名場次：<br><!-- <sub>(可複選)</sub> --></label>
                     </aside>
                     <aside class="col-md-7 col-xs-9 vertical-middle nowrap">
-                      <input id="session1" class="form-control hide" name="session" type="checkbox" value="1">
+                      <input id="session1" class="form-control hide" name="session" type="radio" value="1">
                       <label class="vertical-middle" for="session1">
                         <i class="fa fa-check"></i><span>2017年7月18日(二) 19:00 – 20:00 Energy Up 網球專項體能訓練</span>
                       </label>
@@ -139,7 +141,7 @@
                   </div>
                   <div class="row">
                     <aside class="col-md-7 col-xs-9 col-xs-offset-3 vertical-middle nowrap">
-                      <input id="session2" class="form-control hide" name="session" type="checkbox" value="2">
+                      <input id="session2" class="form-control hide" name="session" type="radio" value="2">
                       <label class="vertical-middle" for="session2">
                         <i class="fa fa-check"></i><span>2017年7月18日(二) 20:30 – 21:30 Energy Up 網球專項體能訓練</span>
                       </label>
@@ -147,7 +149,7 @@
                   </div>
                   <div class="row">
                     <aside class="col-md-7 col-xs-9 col-xs-offset-3 vertical-middle nowrap">
-                      <input id="session3" class="form-control hide" name="session" type="checkbox" value="3">
+                      <input id="session3" class="form-control hide" name="session" type="radio" value="3">
                       <label class="vertical-middle" for="session3">
                         <i class="fa fa-check"></i><span>2017年7月22日(六) 15:30 – 16:30 Level Up 籃球專項體能訓練</span>
                       </label>
@@ -155,7 +157,7 @@
                   </div>
                   <div class="row">
                     <aside class="col-md-7 col-xs-9 col-xs-offset-3 vertical-middle nowrap">
-                      <input id="session4" class="form-control hide" name="session" type="checkbox" value="4">
+                      <input id="session4" class="form-control hide" name="session" type="radio" value="4">
                       <label class="vertical-middle" for="session4">
                         <i class="fa fa-check"></i><span>2017年7月22日(六) 17:00 – 18:00 Level Up 籃球專項體能訓練</span>
                       </label>
@@ -163,7 +165,7 @@
                   </div>
                   <div class="row">
                     <aside class="col-md-7 col-xs-9 col-xs-offset-3 vertical-middle nowrap">
-                      <input id="session5" class="form-control hide" name="session" type="checkbox" value="5">
+                      <input id="session5" class="form-control hide" name="session" type="radio" value="5">
                       <label class="vertical-middle" for="session5">
                         <i class="fa fa-check"></i><span>2017年7月24日(一) 19:00 – 20:00 Power Up 棒球專項體能訓練</span>
                       </label>
@@ -171,7 +173,7 @@
                   </div>
                   <div class="row">
                     <aside class="col-md-7 col-xs-9 col-xs-offset-3 vertical-middle nowrap">
-                      <input id="session6" class="form-control hide" name="session" type="checkbox" value="6">
+                      <input id="session6" class="form-control hide" name="session" type="radio" value="6">
                       <label class="vertical-middle" for="session6">
                         <i class="fa fa-check"></i><span>2017年7月24日(一) 20:30 – 21:30 Power Up 棒球專項體能訓練</span>
                       </label>
@@ -184,7 +186,7 @@
                   </div>
                   <div class="row">
                     <aside class="col-md-7 col-xs-12 col-md-offset-3 vertical-middle nowrap">
-                      <input id="agree" class="form-control hide red" name="agree" type="checkbox">
+                      <input id="agree" class="form-control hide red" name="agree" type="radio">
                       <label class="vertical-middle" for="agree">
                         <i class="fa fa-check"></i><span>我已詳閱並同意個資法與活動辦法</span>
                       </label>
