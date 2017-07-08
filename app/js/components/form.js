@@ -43,7 +43,19 @@ app.partial.form = function(){
 					});
 				}
 			}).catch(function(e){
-				console.log(e);
+
+				$.ajax({url:'../vacancy.json'}).promise().done(function(r){
+					if(r.success){
+						$.each(r.data, function(i, d){
+							// console.log(d);
+							if(d.vacancy == 0){
+								$('#session' + d.no).attr('disabled','disabled');
+							}
+						});
+					}
+				}).catch(function(e){
+					console.log(e);
+				});
 			});
 			$('form').on('submit', function(e){
 				e.stopPropagation();
