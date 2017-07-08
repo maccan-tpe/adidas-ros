@@ -145,7 +145,7 @@
 		}
 		form{			
 			padding-bottom: 400px;			
-			z-index: 10;
+			z-index: 5;
 			position: relative;
 			@media screen and (max-width: #{$screen-xs - 1}) {
 				padding-bottom: 3em;
