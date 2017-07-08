@@ -90,7 +90,7 @@ app.partial.form = function(){
 				name: $('[name=name]').val(),
 				session: $('[name=session]:checked').val()
 			};
-			// console.log(form);
+			console.log(form);
 			if(!$('[name=agree]:checked').length){
 				alert('請勾選確認詳閱並同意個資法與活動辦法');
 				return false;
