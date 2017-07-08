@@ -9,6 +9,14 @@ app.partial.home = function(){
 	var container = $('#container');
 	container.on('page:update:home' , function(page, menu){
 		// $('.parallax').parallax();
+		if($(window).width() > 800){
+			anime({
+				targets: 'html,body',
+				easing: 'easeInOutExpo',
+				scrollTop: 0,
+				delay: 50
+			});
+		}
 		$('.parallax').each(function(idx, ele){
 			var parallax = new Parallax(ele);
 		});
