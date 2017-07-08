@@ -10,20 +10,22 @@ app.partial.form = function(){
 
 	var container = $('#container');
 	container.on('page:update:form' , function(page, menu){
-		if($(window).width() > 800){
-			anime({
-				targets: 'html,body',
-				easing: 'easeInOutExpo',
-				scrollTop: 0,
-				delay: 50
-			});
-			$('.bfh-datepicker').removeClass('hide').append($('[name=age]').attr('type','text')).bfhdatepicker($('.bfh-datepicker').data());
-		}else{
-			$('[name=age]').attr('type','date').insertAfter($('.bfh-datepicker').addClass('hide'));
-		}
 		$('#content').on('resizeend', 500, function(e){
 			e.stopPropagation();
 			e.preventDefault();
+			if($(window).width() > 800){
+				anime({
+					targets: 'html,body',
+					easing: 'easeInOutExpo',
+					scrollTop: 0,
+					delay: 50
+				});
+				$('.bfh-datepicker').removeClass('hide');
+				$('.bfh-datepicker .input-group').append($('[name=age]').attr('type','text'))
+				$('.bfh-datepicker').bfhdatepicker($('.bfh-datepicker').data());
+			}else{
+				$('[name=age]').attr('type','date').insertAfter($('.bfh-datepicker').addClass('hide'));
+			}
 
 			var vw = $(window).width();
 			var vh = $(window).height();
