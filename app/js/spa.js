@@ -75,8 +75,6 @@ app.partial.spa = function(){
 
 				container.trigger('page:update:' + name, menu);
 				container.trigger('page:update', menu);
-
-				app.imageReload.refresh();
 		});
 	}
 
@@ -119,7 +117,7 @@ app.partial.spa = function(){
 					uri = rootPath;
 					break;
 				default:
-					uri = rootPath + name;
+					uri = rootPath + name + '/';
 					break;
 			}
 			updateContent(uri, name, menu, function(){
@@ -148,6 +146,8 @@ app.partial.spa = function(){
 		// console.log(e);
 		// console.log(name);
 		$('html').addClass('loading-done');
+
+		app.imageReload.refresh();
 	});
 
 	container.trigger('page:update', 'home');

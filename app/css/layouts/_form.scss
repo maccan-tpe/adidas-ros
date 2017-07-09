@@ -99,6 +99,7 @@
 				// margin-left: 5.1em;
 				line-height: 1.8em;
 				letter-spacing: 1px;
+				font-weight: 400;
 				@media screen and (max-width: #{$screen-xs - 1}) {
 					margin-left: 1em;
 				}
@@ -317,7 +318,7 @@
 			@include Item(1200, 186, 0, 0, 0, 0, 1200, 'fit', 'absolute');
 		}
 		.shadow-butt{
-			@include Item(1200, 238, 'auto', 0, 0, 0, 1200, 'fit', 'absolute');
+			@include Item(1200, 180, 'auto', 0, 0, 0, 1200, 'fit', 'absolute');
 		}
 	}
 
