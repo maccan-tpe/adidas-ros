@@ -6,6 +6,7 @@
 		@media screen and (max-width: #{$screen-xs - 1}) {
 			@include Item(750, 950, 0, 0, 0, 0, 750,'fit','relative');
 			padding-top: 100vh;
+			padding-top: per(1150, 750);
 		}
 		.visual,.background,.shadow{
 			@include SubItem();
@@ -155,7 +156,7 @@
 		a.cfa{
 			@include Item(279, 58, 490, 0, 0, 0, 570, 'fit', 'absolute');
 			@media screen and (max-width: #{$screen-xs - 1}) {
-				@include Item(369, 77, 'auto', 0, 80, 190, 750,'fit','absolute');
+				@include Item(369, 77, 'auto', 0, 120, 190, 750,'fit','absolute');
 			}
 			.cfa{
 				@include SubItem();

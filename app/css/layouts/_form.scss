@@ -31,6 +31,8 @@
 			@include Item(530, 882, 124, 0, 0, 107, 750,'fit','absolute');
 			background-size: cover;
 			background-position: center;
+			transform-origin: center top;
+			transform: scale(0.8);
 		}
 	}
 	article{
@@ -42,7 +44,7 @@
 		margin: 0 auto;
 		height: 100%;
 		@media screen and (max-width: #{$screen-xs - 1}) {
-			@include Item(690, 146, 1114, 0, 0, 30, 750,'fit','relative');
+			@include Item(690, 146, 890, 0, 0, 30, 750,'fit','relative');
 			height: auto;
 			padding: 0;
 		}

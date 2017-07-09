@@ -29,6 +29,14 @@ app.partial.home = function(){
 				});
 			}else{			
 				$('.home article aside.text').mCustomScrollbar('destroy');
+				$('.home article aside.text').mCustomScrollbar('destroy');
+
+				// anime({
+				// 	targets: 'section.kv',
+				// 	easing: 'easeInOutExpo',
+				// 	duration: 250,
+				// 	paddingTop: window.innerHeight
+				// });
 			}
 		});
 

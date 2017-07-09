@@ -22,6 +22,8 @@ app.partial.spa = function(){
 		rootPath = 'http://localhost:9000/';
 	}
 
+	app.utility.rootPath = rootPath;
+
 	var container = $('#container'),
 		title = document.title;
 
