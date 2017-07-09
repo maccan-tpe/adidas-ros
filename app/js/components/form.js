@@ -129,19 +129,6 @@ app.partial.form = function(){
 			});
 		});
 
-		if($(window).width() > 800){
-			anime({
-				targets: 'html,body',
-				easing: 'easeInOutExpo',
-				scrollTop: 0,
-				delay: 50
-			});
-			$('.bfh-datepicker').removeClass('hide');
-			$('.bfh-datepicker .input-group').append($('[name=age]').attr('type','text'));
-			$('.bfh-datepicker').bfhdatepicker($('.bfh-datepicker').data());
-		}else{
-			$('[name=age]').attr('type','date').insertAfter($('.bfh-datepicker').addClass('hide'));
-		}
 	});
 
 	if($('#content.form').length){
