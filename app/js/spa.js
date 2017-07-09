@@ -65,21 +65,8 @@ app.partial.spa = function(){
 				container.html('').html(htmlContent).promise().done(function(e){
 					// console.log($('a[data-href]', container));
 					$('a[data-href]', container).on('click', function(e){
-						var $ele = $(this);
-						var name = $ele.attr('data-ref'), uri;
-						var menu = null;
-						switch(name){
-							case 'home':
-								uri = rootPath;
-								break;
-							default
-								uri = rootPath + name;
-								break;
-						}
-						updateContent(uri, name, menu, function(){
-							// console.log(name);
-							$ele.addClass('active').siblings().removeClass('active');
-						});
+						$('header .menu a[data-ref='+$(this).attr('data-ref')+']').trigger('click', e);
+						// console.log(e);
 					});
 
 				});
@@ -124,13 +111,14 @@ app.partial.spa = function(){
 		e.preventDefault();
 		if(history.pushState){
 			var $ele = $(this);
+			// console.log($ele);
 			var name = $ele.attr('data-ref'), uri;
 			var menu = null;
 			switch(name){
 				case 'home':
 					uri = rootPath;
 					break;
-				default
+				default:
 					uri = rootPath + name;
 					break;
 			}
