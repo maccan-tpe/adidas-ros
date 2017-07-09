@@ -8,12 +8,19 @@
 app.partial.spa = function(){
 
 	// 網址為 gulp 或者 github 時 設定成debug 模式
-	var debug = /localhost[:]9000|github\.io/.test(location.href);
-	var github = /maccan-tpe\.github\.io\/adidas-ros\//.test(location.href);
-	var stage = /staging/.test(location.href);
-	var rootPath = github ? 'https://maccan-tpe.github.io/adidas-ros/' : '/';
-	rootPath = stage ? '/staging/' : rootPath;
-
+	var debug = /localhost[:]9000/.test(location.href);
+	var rootPath = '/';
+	if(/nelson\.works/ig.test(location.href)){
+		rootPath = 'http://nelson.works/adidas-ros/';
+	} else if(/maccan-tpe\.github\.io/ig.test(location.href)){
+		rootPath = 'https://maccan-tpe.github.io/adidas-ros/';
+	} else if(/www\.adidas-campaign\.com\.tw/ig.test(location.href)){
+		rootPath = 'http://www.adidas-campaign.com.tw/heretocreate/event/';
+	} else if(/tw2\.klear\.ly\/2017\/adidas-ros/ig.test(location.href)){
+		rootPath = 'http://tw2.klear.ly/2017/adidas-ros/';
+	} else if(debug){
+		rootPath = 'http://localhost:9000/';
+	}
 
 	var container = $('#container'),
 		title = document.title;
@@ -59,9 +66,16 @@ app.partial.spa = function(){
 					// console.log($('a[data-href]', container));
 					$('a[data-href]', container).on('click', function(e){
 						var $ele = $(this);
-						var uri = $ele.attr('data-href');
-						var name = $ele.attr('data-ref');
+						var name = $ele.attr('data-ref'), uri;
 						var menu = null;
+						switch(name){
+							case 'home':
+								uri = rootPath;
+								break;
+							default
+								uri = rootPath + name;
+								break;
+						}
 						updateContent(uri, name, menu, function(){
 							// console.log(name);
 							$ele.addClass('active').siblings().removeClass('active');
@@ -106,14 +120,28 @@ app.partial.spa = function(){
 	});
 
 	$('a[data-href]').on('click', function(e){
-		var $ele = $(this);
-		var uri = $ele.attr('data-href');
-		var name = $ele.attr('data-ref');
-		var menu = null;
-		updateContent(uri, name, menu, function(){
-			// console.log(name);
-			$ele.addClass('active').siblings().removeClass('active');
-		});
+		e.stopPropagation();
+		e.preventDefault();
+		if(history.pushState){
+			var $ele = $(this);
+			var name = $ele.attr('data-ref'), uri;
+			var menu = null;
+			switch(name){
+				case 'home':
+					uri = rootPath;
+					break;
+				default
+					uri = rootPath + name;
+					break;
+			}
+			updateContent(uri, name, menu, function(){
+				// console.log(name);
+				$ele.addClass('active').siblings().removeClass('active');
+			});
+		}
+		else{
+			location.href = $ele.attr('data-href');
+		}
 	}).on('mousemove', function(e){
 		var $ele = $(this);
 		$ele.addClass('hover').siblings().removeClass('hover');
