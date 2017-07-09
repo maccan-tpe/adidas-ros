@@ -4,7 +4,7 @@
 	no-mixed-spaces-and-tabs, no-multi-spaces, camelcase, no-loop-func,no-empty,
 	key-spacing ,curly, no-shadow, no-return-assign, no-redeclare, no-unused-vars,
 	eqeqeq, no-extend-native, quotes , no-inner-declarations, no-alert */
-/*global app, $ */
+/*global app, $, anime */
 app.partial.spa = function(){
 
 	// 網址為 gulp 或者 github 時 設定成debug 模式
