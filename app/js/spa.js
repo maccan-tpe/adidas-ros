@@ -122,6 +122,11 @@ app.partial.spa = function(){
 			}
 			updateContent(uri, name, menu, function(){
 				// console.log(name);
+				anime({
+					targets: 'html,body',
+					easing: 'easeInOutExpo',
+					scrollTop: 0
+				});
 				$ele.addClass('active').siblings().removeClass('active');
 			});
 		}

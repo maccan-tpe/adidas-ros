@@ -122,7 +122,7 @@ app.partial.form = function(){
 				console.log(r);
 				if(r.success == 1){
 					alert('感謝您的報名與熱烈支持，我們會立即為您處理！報名成功會以簡訊通知，收到簡訊後才算成功完成報名。');
-					$('header .menu a[data-rel=home]').trigger('click');
+					$('header .menu a[data-ref]:eq(0)').trigger('click');
 				}else{
 					alert(r.msg.replace('抱歉，僅開放有限的年齡層參與', '請確認您符合報名資格。'));
 				}
