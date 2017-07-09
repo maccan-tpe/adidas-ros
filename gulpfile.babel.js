@@ -56,7 +56,7 @@ gulp.task('html', ['css', 'js', 'components'], () => {
     .pipe($.ignore.exclude(/vendor\.js$/))
     // .pipe($.ignore.exclude(/vendor\.css$/))
     .pipe($.uniqueFiles())
-    .pipe($.if(/\.js$/, $.uglify()))
+    // .pipe($.if(/\.js$/, $.uglify()))
     .pipe($.if(/\.css$/, $.cssnano()))
     // .pipe($.debug())
     .pipe($.if(/\.html$/, $.htmlmin({collapseWhitespace: true})))

@@ -110,7 +110,6 @@ app.partial.spa = function(){
 		var uri = $ele.attr('data-href');
 		var name = $ele.attr('data-ref');
 		var menu = null;
-		alert($ele.attr('data-href'));
 		updateContent(uri, name, menu, function(){
 			// console.log(name);
 			$ele.addClass('active').siblings().removeClass('active');
