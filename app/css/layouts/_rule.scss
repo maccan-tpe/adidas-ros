@@ -145,4 +145,16 @@
 			@include Item(1200, 180, 'auto', 0, 0, 0, 1200, 'fit', 'absolute');
 		}
 	}
+	.scroll{
+		@include Item(1920, 131, 'auto', 'auto', 0, 0, 1920, 'fit', 'absolute');
+		background-position: center;
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(29, 66, 'auto', 0, 0, 360, 750,'fit','absolute');
+			background-position: center top;
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+		}
+	}
 }

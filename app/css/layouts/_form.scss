@@ -109,7 +109,7 @@
 				// margin-left: 11em;
 				padding-left: 1em;
 				position: relative;
-				margin-bottom: em(260, 14);
+				// margin-bottom: em(220, 14);
 				@media screen and (max-width: #{$screen-xs - 1}) {
 					margin-bottom: em(420, 14);
 					padding-left: 0;
@@ -128,17 +128,25 @@
 					}
 				}
 				li{
-					margin-bottom: 2.5em;
+					// margin-bottom: 2.5em;
 					p{
 						margin-left: em(52, 14);
 						@media screen and (max-width: #{$screen-xs - 1}) {
 							margin-left: em(35, 14);
 						}
+						sup{
+							line-height: 1.2em;
+						}
 					}
-					p:last-child{
-						position: absolute;
-					}
+					// p:last-child{
+					// 	position: absolute;
+					// }
 				}
+			}
+		}
+		ul.no-lines{
+			&:before{ 
+				display:none;
 			}
 		}
 		h3{
@@ -169,7 +177,7 @@
 					font-weight: bold;
 					padding-top:0;
 					padding-bottom:0;
-					line-height: 1.8em;
+					line-height: 1.5em;
 					&:focus, &:hover, &:active{
 						box-shadow: none;
 						border: 0;
@@ -324,6 +332,18 @@
 
 	.nowrap{
 		white-space: nowrap;
+	}
+	.scroll{
+		@include Item(1920, 131, 'auto', 'auto', 0, 0, 1920, 'fit', 'absolute');
+		background-position: center;
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			@include Item(29, 66, 'auto', 0, 0, 360, 750,'fit','absolute');
+			background-position: center top;
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+		}
 	}
 }
 .bfh-datepicker {
