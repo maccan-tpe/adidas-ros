@@ -24,7 +24,7 @@ app.partial.form = function() {
                 $('.bfh-datepicker .input-group').append($('[name=age]').attr('type', 'text'));
                 $('.bfh-datepicker').bfhdatepicker($('.bfh-datepicker').data());
             } else {
-                $('[name=age]').attr('type', 'date').insertAfter($('.bfh-datepicker').addClass('hide'));
+                $('[name=age]').attr('type', 'date').removeAttr('readonly').insertAfter($('.bfh-datepicker').addClass('hide'));
             }
 
             var vw = $(window).width();
