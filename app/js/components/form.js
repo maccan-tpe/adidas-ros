@@ -9,6 +9,10 @@ app.partial.form = function() {
 
 
     var container = $('#container');
+    var api = 'https://tw2.klear.ly/2017/adidas-ros/api.php';
+    if(/www\.adidas-campaign\.com\.tw/ig.test(location.href)){
+    	api = 'http://www.adidas-campaign.com.tw/heretocreate/event/api.php';
+    }
     container.on('page:update:form', function(page, menu) {
         $('#content').on('resizeend', 500, function(e) {
             e.stopPropagation();
@@ -47,7 +51,7 @@ app.partial.form = function() {
             }
 
         });
-        $.ajax({ url: 'https://tw2.klear.ly/2017/adidas-ros/api.php?session_avail' }).promise().done(function(r) {
+        $.ajax({ url: api + '?session_avail' }).promise().done(function(r) {
             if (r.success) {
                 $.each(r.data, function(i, d) {
                     // console.log(d);
@@ -114,7 +118,7 @@ app.partial.form = function() {
 
             $.ajax({
                 method: 'post',
-                url: 'https://tw2.klear.ly/2017/adidas-ros/api.php?submit',
+                url: api + '?submit',
                 data: form
             }).promise().catch(function(e) {
                 console.log(e);
