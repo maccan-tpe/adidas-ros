@@ -90,7 +90,7 @@ app.partial.form = function() {
                 name: $('[name=name]').val(),
                 session: $('[name=session]:checked').val()
             };
-            console.log(form);
+            // console.log(form);
             if (!$('[name=agree]:checked').length) {
                 alert('請勾選確認詳閱並同意個資法與活動辦法');
                 return false;
@@ -119,7 +119,7 @@ app.partial.form = function() {
             }).promise().catch(function(e) {
                 console.log(e);
             }).done(function(r) {
-                console.log(r);
+                // console.log(r);
                 if (r.success == 1) {
                     alert('感謝您的報名與熱烈支持，我們會立即為您處理！報名成功會以簡訊通知，收到簡訊後才算成功完成報名。');
                     location.href = app.utility.rootPath + '#Jeremy Lin';
