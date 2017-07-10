@@ -1,366 +1,374 @@
-.form{
-	@include SubItem();
-	overflow: auto;
-	@media screen and (max-width: #{$screen-xs - 1}) {
-		position: relative;
-		height: auto!important;;
-		font-size: 1.4em;
-	}
-	.background,.shadow{
-		@include SubItem();
-	}
-	.background{
-		background-size: cover;
-		background-position: center;
-		@media screen and (max-width: #{$screen-xs - 1}) {
-			background-size: 100% auto;
-			background-position: center top;
-			background-repeat: no-repeat;
-		}
-	}
-	.shadow{
-		background-size: 100% 100%;
-		background-position: center;
-	}
-	.adidas{
-		@include Item(361, 645, 210, 1170, 0, 'auto', 1920,'fit','absolute');
-		background-size: cover;
-		background-position: center;
-		z-index: 5;
-		@media screen and (max-width: #{$screen-xs - 1}) {
-			@include Item(530, 882, 124, 0, 0, 107, 750,'fit','absolute');
-			background-size: cover;
-			background-position: center;
-			transform-origin: center top;
-			transform: scale(0.8);
-		}
-	}
-	article{
-		font-size: 1.15em;
-		width: 1200px;
-		top: 0;
-		position: relative;
-		// margin: 0 0 0 per(914, 1920);
-		margin: 0 auto;
-		height: 100%;
-		@media screen and (max-width: #{$screen-xs - 1}) {
-			@include Item(690, 146, 890, 0, 0, 30, 750,'fit','relative');
-			height: auto;
-			padding: 0;
-		}
-		.text{
-			// @include SubItem();
-			width: 640px;
-			margin-left: 560px;
-			height: 100%;			
-			@media screen and (max-width: #{$screen-xs - 1}) {
-				position: relative;
-				height: auto;
-				margin: 0 auto;
-				width: per(690, 750)
-			}
-			.cap{
-				color: #ff0054;
-				position: relative;
-				vertical-align: middle;
-				margin-left: 0;
-				margin-left: 0.19em;
-				font-weight: 600;
-				margin-top: em(60, 18);
-				&:first-child{
-					margin-top: em(200, 18);	
-				}
-			}
-			.subtitle{
-				color: #fff;
-				position: relative;
-				vertical-align: middle;
-				margin-left: 0;
-				margin-left: 0.19em;
-				font-weight: 600;
-				&:before{
-					position: absolute;
-					top:50%;
-					height: 1px;
-					content: '';
-					width: 0.6em;
-					left: -1.1em;					
-					background: rgba(255,255,255,0.2);
-					@media screen and (max-width: #{$screen-xs - 1}) {
-						display: none;
-					}
-				}
-				img{
-					margin-right: 0.6em;
-					@media screen and (max-width: #{$screen-xs - 1}) {
-						width: 0.6em;
-					}
-				}
-			}
-			p{
-				// margin-left: 5.1em;
-				line-height: 1.8em;
-				letter-spacing: 1px;
-				font-weight: 400;
-				@media screen and (max-width: #{$screen-xs - 1}) {
-					margin-left: 1em;
-				}
-
-			}
-			ul{
-				// margin-left: 11em;
-				padding-left: 1em;
-				position: relative;
-				// margin-bottom: em(220, 14);
-				@media screen and (max-width: #{$screen-xs - 1}) {
-					// margin-bottom: em(420, 14);
-					padding-left: 0;
-				}
-				&:before{
-					position: absolute;
-					content: '';
-					border-left:1px solid rgba(255,255,255,0.2);
-					width: 0;
-					height: 100%;
-					height: calc(100% - 1.7em);
-					left: 0;
-					top: 0.9em;
-					@media screen and (max-width: #{$screen-xs - 1}) {
-						display: none;
-					}
-				}
-				li{
-					// margin-bottom: 2.5em;
-					p{
-						margin-left: em(52, 14);
-						@media screen and (max-width: #{$screen-xs - 1}) {
-							margin-left: em(35, 14);
-						}
-						sup{
-							line-height: 1.2em;
-						}
-					}
-					// p:last-child{
-					// 	position: absolute;
-					// }
-				}
-			}
-		}
-		ul.no-lines{
-			&:before{ 
-				display:none;
-			}
-		}
-		h3{
-			margin-bottom: em(30, 24);
-			img{
-				width: 100%;
-			}
-		}
-		form{			
-			padding-bottom: 200px;			
-			z-index: 5;
-			position: relative;
-			@media screen and (max-width: #{$screen-xs - 1}) {
-				padding-bottom: 3em;
-			}
-			aside{
-				line-height: 20px;
-				padding: 0;
-				label{
-					font-weight: normal;
-				}
-				[type="text"],[type="email"],[type="date"]{
-					font-size: 1em;
-					background: #999;
-					color: #000;
-					border: 0;
-					border-radius: 0;
-					font-weight: bold;
-					padding-top:0;
-					padding-bottom:0;
-					line-height: 1.5em;
-					&:focus, &:hover, &:active{
-						box-shadow: none;
-						border: 0;
-					}
-					&:focus{
-						border: 1px solid #fff;
-						&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-							color: #666;
-						}
-						&::-moz-placeholder { /*Firefox 19+ */
-							color: #666;
-						}
-						&:-ms-input-placeholder { /* IE 10+ */
-							color: #666;
-						}
-						&:-moz-placeholder { /* Firefox 18- */
-							color: #666;
-						}
-					}
-					&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-						color: #000;
-						font-size: 0.85em;
-						font-weight: bold;
-						transition-duration: 0.25s;
-					}
-					&::-moz-placeholder { /*Firefox 19+ */
-						color: #000;
-						font-size: 0.85em;
-						font-weight: bold;
-						transition-duration: 0.25s;
-					}
-					&:-ms-input-placeholder { /* IE 10+ */
-						color: #000;
-						font-size: 0.85em;
-						font-weight: bold;
-						transition-duration: 0.25s;
-					}
-					&:-moz-placeholder { /* Firefox 18- */
-						color: #000;
-						font-size: 0.85em;
-						font-weight: bold;
-						transition-duration: 0.25s;
-					}
-				}
-				[type="radio"]{ 
-					&~label{
-						span{
-							white-space: normal;
-							display: inline-block;
-							width: 88%;
-							@media screen and (max-width: #{$screen-xs - 1}) {
-								width: calc(100% - 3em);
-							}
-						}
-					}
-					&~label i{
-
-						display: inline-block;
-						width: 1.8em;
-						height: 1.8em;
-						background: #999;
-						line-height: 2em;
-						margin-right: 0.5em;
-						color: transparent;
-						cursor: pointer;
-						&:before{
-							display: block;
-							text-align: center;
-						}
-					}
-					&:checked{
-						&~label i{
-							color: #fff;
-						}
-
-					}
-					&.red{
-						&~label{
-							white-space: nowrap;
-							span{
-								white-space: normal;
-								@media screen and (max-width: #{$screen-xs - 1}) {
-									width: auto;
-								}
-							}
-						}
-						&~label i{
-							width: 1.7em;
-							height: 1.7em;
-							border:1px solid #ff0054;
-							background: none;
-							line-height: 1.8em;
-							&:before{
-								display: block;
-								text-align: center;
-							}
-						}
-
-					}
-
-					&[disabled]{
-						&~label{
-							opacity: 0.6;
-							pointer-events: none;
-							i{
-								display: none;
-							}
-							span:after{
-								content:'(額滿)';
-							}
-							span{
-								width: 98%;
-							}
-						}
-					}
-				}
-				button{
-					height: 64px;
-					font-size: 20px;
-					color: #fff;
-					border-radius: 0!important;
-					background: none!important;
-					border: 3px solid #ff0054;
-					box-shadow: none!important;
-				}
-
-			}
-			.row{
-				margin: 0 auto;
-
-				&.row{
-					margin-top: 18px;
-				}
-			}
-			a{
-				text-decoration: underline;
-			}
-
-		}
-		.shadow-top, .shadow-butt{
-			background-size: 100% auto;
-			background-position: center;
-			background-repeat: no-repeat;
-		}
-		.shadow-top{
-			@include Item(1200, 186, 0, 0, 0, 0, 1200, 'fit', 'absolute');
-		}
-		.shadow-butt{
-			@include Item(1200, 180, 'auto', 0, 0, 0, 1200, 'fit', 'absolute');
-		}
-	}
-
-	.nowrap{
-		white-space: nowrap;
-	}
-	.scroll{
-		@include Item(1920, 131, 'auto', 'auto', 0, 0, 1920, 'fit', 'absolute');
-		background-position: center;
-		background-size: auto 100%;
-		background-repeat: no-repeat;
-		@media screen and (max-width: #{$screen-xs - 1}) {
-			@include Item(29, 66, 'auto', 0, 0, 360, 750,'fit','absolute');
-			background-position: center top;
-			background-size: 100% auto;
-			background-repeat: no-repeat;
-		}
-	}
+.form {
+    @include SubItem();
+    overflow: auto;
+    @media screen and (max-width: #{$screen-xs - 1}) {
+        position: relative;
+        height: auto!important;
+        ;
+        font-size: 1.4em;
+    }
+    .background,
+    .shadow {
+        @include SubItem();
+    }
+    .background {
+        background-size: cover;
+        background-position: center;
+        @media screen and (max-width: #{$screen-xs - 1}) {
+            background-size: 100% auto;
+            background-position: center top;
+            background-repeat: no-repeat;
+        }
+    }
+    .shadow {
+        background-size: 100% 100%;
+        background-position: center;
+    }
+    .adidas {
+        @include Item(361, 645, 210, 1170, 0, 'auto', 1920, 'fit', 'absolute');
+        background-size: cover;
+        background-position: center;
+        z-index: 5;
+        @media screen and (max-width: #{$screen-xs - 1}) {
+            @include Item(530, 882, 124, 0, 0, 107, 750, 'fit', 'absolute');
+            background-size: cover;
+            background-position: center;
+            transform-origin: center top;
+            transform: scale(0.8);
+        }
+    }
+    article {
+        font-size: 1.15em;
+        width: 1200px;
+        top: 0;
+        position: relative;
+        // margin: 0 0 0 per(914, 1920);
+        margin: 0 auto;
+        height: 100%;
+        @media screen and (max-width: #{$screen-xs - 1}) {
+            @include Item(690, 146, 890, 0, 0, 30, 750, 'fit', 'relative');
+            height: auto;
+            padding: 0;
+        }
+        .text {
+            // @include SubItem();
+            width: 640px;
+            margin-left: 560px;
+            height: 100%;
+            @media screen and (max-width: #{$screen-xs - 1}) {
+                position: relative;
+                height: auto;
+                margin: 0 auto;
+                width: per(690, 750)
+            }
+            .cap {
+                color: #ff0054;
+                position: relative;
+                vertical-align: middle;
+                margin-left: 0;
+                margin-left: 0.19em;
+                font-weight: 600;
+                margin-top: em(60, 18);
+                &:first-child {
+                    margin-top: em(200, 18);
+                }
+            }
+            .subtitle {
+                color: #fff;
+                position: relative;
+                vertical-align: middle;
+                margin-left: 0;
+                margin-left: 0.19em;
+                font-weight: 600;
+                &:before {
+                    position: absolute;
+                    top: 50%;
+                    height: 1px;
+                    content: '';
+                    width: 0.6em;
+                    left: -1.1em;
+                    background: rgba(255, 255, 255, 0.2);
+                    @media screen and (max-width: #{$screen-xs - 1}) {
+                        display: none;
+                    }
+                }
+                img {
+                    margin-right: 0.6em;
+                    @media screen and (max-width: #{$screen-xs - 1}) {
+                        width: 0.6em;
+                    }
+                }
+            }
+            p {
+                // margin-left: 5.1em;
+                line-height: 1.8em;
+                letter-spacing: 1px;
+                font-weight: 400;
+                @media screen and (max-width: #{$screen-xs - 1}) {
+                    margin-left: 1em;
+                }
+            }
+            ul {
+                // margin-left: 11em;
+                padding-left: 1em;
+                position: relative;
+                // margin-bottom: em(220, 14);
+                @media screen and (max-width: #{$screen-xs - 1}) {
+                    // margin-bottom: em(420, 14);
+                    padding-left: 0;
+                }
+                &:before {
+                    position: absolute;
+                    content: '';
+                    border-left: 1px solid rgba(255, 255, 255, 0.2);
+                    width: 0;
+                    height: 100%;
+                    height: calc(100% - 1.7em);
+                    left: 0;
+                    top: 0.9em;
+                    @media screen and (max-width: #{$screen-xs - 1}) {
+                        display: none;
+                    }
+                }
+                li {
+                    // margin-bottom: 2.5em;
+                    p {
+                        margin-left: em(52, 14);
+                        @media screen and (max-width: #{$screen-xs - 1}) {
+                            margin-left: em(35, 14);
+                        }
+                        sup {
+                            line-height: 1.2em;
+                        }
+                    }
+                    // p:last-child{
+                    // 	position: absolute;
+                    // }
+                }
+            }
+        }
+        ul.no-lines {
+            &:before {
+                display: none;
+            }
+        }
+        h3 {
+            margin-bottom: em(30, 24);
+            img {
+                width: 100%;
+            }
+        }
+        form {
+            padding-bottom: 200px;
+            z-index: 5;
+            position: relative;
+            @media screen and (max-width: #{$screen-xs - 1}) {
+                padding-bottom: 3em;
+            }
+            aside {
+                line-height: 20px;
+                padding: 0;
+                label {
+                    font-weight: normal;
+                }
+                [type="text"],
+                [type="email"],
+                [type="date"] {
+                    font-size: 1em;
+                    background: #999;
+                    color: #000;
+                    border: 0;
+                    border-radius: 0;
+                    font-weight: bold;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    line-height: 1.5em;
+                    &:focus,
+                    &:hover,
+                    &:active {
+                        box-shadow: none;
+                        border: 0;
+                    }
+                    &:focus {
+                        border: 1px solid #fff;
+                        &::-webkit-input-placeholder {
+                            /* Chrome/Opera/Safari */
+                            color: #666;
+                        }
+                        &::-moz-placeholder {
+                            /*Firefox 19+ */
+                            color: #666;
+                        }
+                        &:-ms-input-placeholder {
+                            /* IE 10+ */
+                            color: #666;
+                        }
+                        &:-moz-placeholder {
+                            /* Firefox 18- */
+                            color: #666;
+                        }
+                    }
+                    &::-webkit-input-placeholder {
+                        /* Chrome/Opera/Safari */
+                        color: #000;
+                        font-size: 0.85em;
+                        font-weight: bold;
+                        transition-duration: 0.25s;
+                    }
+                    &::-moz-placeholder {
+                        /*Firefox 19+ */
+                        color: #000;
+                        font-size: 0.85em;
+                        font-weight: bold;
+                        transition-duration: 0.25s;
+                    }
+                    &:-ms-input-placeholder {
+                        /* IE 10+ */
+                        color: #000;
+                        font-size: 0.85em;
+                        font-weight: bold;
+                        transition-duration: 0.25s;
+                    }
+                    &:-moz-placeholder {
+                        /* Firefox 18- */
+                        color: #000;
+                        font-size: 0.85em;
+                        font-weight: bold;
+                        transition-duration: 0.25s;
+                    }
+                }
+                [type="radio"] {
+                    &~label {
+                        span {
+                            // white-space: normal;
+                            display: inline-block;
+                            width: 88%;
+                            @media screen and (max-width: #{$screen-xs - 1}) {
+                                width: calc(100% - 3em);
+                            }
+                        }
+                    }
+                    &~label i {
+                        display: inline-block;
+                        width: 1.8em;
+                        height: 1.8em;
+                        background: #999;
+                        line-height: 2em;
+                        margin-right: 0.5em;
+                        color: transparent;
+                        cursor: pointer;
+                        &:before {
+                            display: block;
+                            text-align: center;
+                        }
+                    }
+                    &:checked {
+                        &~label i {
+                            color: #fff;
+                        }
+                    }
+                    &.red {
+                        &~label {
+                            white-space: nowrap;
+                            span {
+                                // white-space: normal;
+                                @media screen and (max-width: #{$screen-xs - 1}) {
+                                    width: auto;
+                                }
+                            }
+                        }
+                        &~label i {
+                            width: 1.7em;
+                            height: 1.7em;
+                            border: 1px solid #ff0054;
+                            background: none;
+                            line-height: 1.8em;
+                            &:before {
+                                display: block;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    &[disabled] {
+                        &~label {
+                            opacity: 0.6;
+                            pointer-events: none;
+                            i {
+                                display: none;
+                            }
+                            span:after {
+                                content: '(額滿)';
+                            }
+                            span {
+                                width: 98%;
+                            }
+                        }
+                    }
+                }
+                button {
+                    height: 64px;
+                    font-size: 20px;
+                    color: #fff;
+                    border-radius: 0!important;
+                    background: none!important;
+                    border: 3px solid #ff0054;
+                    box-shadow: none!important;
+                }
+            }
+            .row {
+                margin: 0 auto;
+                &.row {
+                    margin-top: 18px;
+                }
+            }
+            a {
+                text-decoration: underline;
+            }
+        }
+        .shadow-top,
+        .shadow-butt {
+            background-size: 100% auto;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .shadow-top {
+            @include Item(1200, 186, 0, 0, 0, 0, 1200, 'fit', 'absolute');
+        }
+        .shadow-butt {
+            @include Item(1200, 180, 'auto', 0, 0, 0, 1200, 'fit', 'absolute');
+        }
+    }
+    .nowrap {
+        white-space: nowrap;
+    }
+    .scroll {
+        @include Item(1920, 131, 'auto', 'auto', 0, 0, 1920, 'fit', 'absolute');
+        background-position: center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        @media screen and (max-width: #{$screen-xs - 1}) {
+            @include Item(29, 66, 'auto', 0, 0, 360, 750, 'fit', 'absolute');
+            background-position: center top;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+        }
+    }
 }
+
 .bfh-datepicker {
-	color: #000;
-	border-radius: 0!important;
-	a{
-		color: #000;
-	}
+    color: #000;
+    border-radius: 0!important;
+    a {
+        color: #000;
+    }
 }
-.input-group-addon{
-	border-radius: 0!important;
-	background: #999;
-	border: 0;
 
+.input-group-addon {
+    border-radius: 0!important;
+    background: #999;
+    border: 0;
 }
-.mCSB_draggerContainer{
-	transform: scaleY(0.6) translateY(2%);
+
+.mCSB_draggerContainer {
+    transform: scaleY(0.6) translateY(2%);
 }
