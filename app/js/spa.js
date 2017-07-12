@@ -83,6 +83,7 @@ app.partial.spa = function(){
 	function pushState(info, ref){
 		// console.log('history.pushState('+JSON.stringify(info)+', '+(title || document.title)+', '+info.uri+')');
 		// console.log('push ref:',ref,':',info);
+		console.log(info);
 		info.title = info.title || title;
 		document.title = info.title;
 		history.pushState(info, info.title, info.uri);
@@ -116,10 +117,10 @@ app.partial.spa = function(){
 			var menu = null;
 			switch(name){
 				case 'home':
-					uri = rootPath;
+					uri = rootPath + location.search + location.hash;
 					break;
 				default:
-					uri = rootPath + name + '/';
+					uri = rootPath + name + '/' + location.search + location.hash;
 					break;
 			}
 			updateContent(uri, name, menu, function(){

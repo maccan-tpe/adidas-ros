@@ -18,7 +18,7 @@ app.partial.ga = function(){
 			}
 		});
 		$('#container').on('page:update:form', function(){
-			ga('send', 'pageview', { 'page': 'PC_info', 'title': 'mobile_info'});
+			ga('send', 'pageview', { 'page': 'mobile_info', 'title': 'mobile_info'});
 		});
 		$('#container').on('page:update:rule', function(){
 			ga('send', 'pageview', { 'page': 'mobile_rules', 'title': 'mobile_rules'});

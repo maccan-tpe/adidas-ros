@@ -10,14 +10,6 @@ app.partial.rule = function(){
 
 	var container = $('#container');
 	container.on('page:update:rule' , function(page, menu){
-		if($(window).width() > 800){
-			anime({
-				targets: 'html,body',
-				easing: 'easeInOutExpo',
-				scrollTop: 0,
-				delay: 50
-			});
-		}
 		$('#content').on('resizeend', 500, function(e){
 			e.stopPropagation();
 			e.preventDefault();

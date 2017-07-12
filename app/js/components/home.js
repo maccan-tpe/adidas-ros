@@ -71,8 +71,8 @@ app.partial.home = function(){
 
 
 		$('#content').on('rolling', function(e){
-			var currentTop = $(window).scrollTop() + $(window).height() / 3;
-			var currentButt = $(window).scrollTop() + $(window).height() / 3 * 2;
+			var currentTop = $(window).scrollTop() + $(window).height() / 20;
+			var currentButt = $(window).scrollTop() + $(window).height() / 20 * 19;
 			$('.kv, article.lin, article.chen, article.lu').each(function(i, section){
 				var sectionId = $(this).attr('id');
 				var rg = range[sectionId];
@@ -82,17 +82,17 @@ app.partial.home = function(){
 					}
 				} 
 				if(activeSection && !$('#' + activeSection).hasClass('active')){
-					console.log(activeSection);
+					// console.log(activeSection);
 					$('#' + activeSection).addClass('active').trigger('section:active')
 						.siblings().removeClass('active');
 					if($('#' + activeSection).hasClass('lin')){
-						history.pushState(null, document.title, '#Jeremy Lin');
+						history.pushState(null, document.title, location.search + '#Jeremy Lin');
 					}else if($('#' + activeSection).hasClass('chen')){
-						history.pushState(null, document.title, '#Wei-Yin Chen');
+						history.pushState(null, document.title, location.search + '#Wei-Yin Chen');
 					}else if($('#' + activeSection).hasClass('lu')){
-						history.pushState(null, document.title, '#Rendy Lu');
+						history.pushState(null, document.title, location.search + '#Rendy Lu');
 					}else{
-						history.pushState(null, document.title, './');
+						history.pushState(null, document.title, './' + location.search );
 					}
 				}
 				scrollTop = currentTop;
@@ -106,7 +106,19 @@ app.partial.home = function(){
 					targets: 'html,body',
 					easing: 'easeInOutExpo',
 					scrollTop: to.offset().top,
-					delay: 1200
+					delay: 1200,
+					complete: function(){
+						$('#content').trigger('rolling');
+						if(to.hasClass('lin')){
+							history.pushState(null, document.title, location.search + '#Jeremy Lin');
+						}else if(to.hasClass('chen')){
+							history.pushState(null, document.title, location.search + '#Wei-Yin Chen');
+						}else if(to.hasClass('lu')){
+							history.pushState(null, document.title, location.search + '#Rendy Lu');
+						}else{
+							history.pushState(null, document.title, './' + location.search );
+						}
+					}
 				});
 			// }
 		}

@@ -18,12 +18,6 @@ app.partial.form = function() {
             e.stopPropagation();
             e.preventDefault();
             if ($(window).width() > 800) {
-                anime({
-                    targets: 'html,body',
-                    easing: 'easeInOutExpo',
-                    scrollTop: 0,
-                    delay: 50
-                });
                 $('.bfh-datepicker').removeClass('hide');
                 $('.bfh-datepicker .input-group').append($('[name=age]').attr('type', 'text'));
                 $('.bfh-datepicker').bfhdatepicker($('.bfh-datepicker').data());
