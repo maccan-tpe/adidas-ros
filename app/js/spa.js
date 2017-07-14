@@ -125,6 +125,11 @@ app.partial.spa = function(){
 			}
 			updateContent(uri, name, menu, function(){
 				// console.log(name);
+				if(/jeremy(\s|[%]20)lin/i.test(location.hash)||
+					/wei[-]yin(\s|[%]20)chen/i.test(location.hash)||
+					/rendy(\s|[%]20)lu/i.test(location.hash)){
+					return false;
+				}
 				anime({
 					targets: 'html,body',
 					easing: 'easeInOutExpo',
