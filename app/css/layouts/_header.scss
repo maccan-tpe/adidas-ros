@@ -83,19 +83,25 @@ header {
 				}
 				&:nth-child(1){
 					left: per(80, 750);
-					top: per(227, 950);
+					top: per(187, 950);
 					width: per(291, 750);
 					padding-top: per(70, 750);
 				}
 				&:nth-child(2){
 					left: per(80, 750);
-					top: per(382, 950);
+					top: per(342, 950);
 					width: per(409, 750);
 					padding-top: per(142, 750);
 				}
 				&:nth-child(3){
 					left: per(80, 750);
-					top: per(599, 950);
+					top: per(559, 950);
+					width: per(290, 750);
+					padding-top: per(70, 750);
+				}
+				&:nth-child(4){
+					left: per(80, 750);
+					top: per(710, 950);
 					width: per(290, 750);
 					padding-top: per(70, 750);
 				}

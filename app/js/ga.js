@@ -26,6 +26,9 @@ app.partial.ga = function(){
 		$('#container').on('page:update:home', function(){
 			ga('send', 'pageview', { 'page': 'Mobile_index', 'title': 'Mobile_index'});
 		});
+		$('#container').on('page:update:home', function(){
+			ga('send', 'pageview', { 'page': 'Mobile_list', 'title': 'Mobile_list'});
+		});
 	}else{
 		$('[data-ga]').on('click', function(e){
 			$(this).attr('data-ga');
@@ -46,6 +49,9 @@ app.partial.ga = function(){
 		});
 		$('#container').on('page:update:home', function(){
 			ga('send', 'pageview', { 'page': 'PC_index', 'title': 'PC_index'});
+		});
+		$('#container').on('page:update:list', function(){
+			ga('send', 'pageview', { 'page': 'PC_list', 'title': 'PC_list'});
 		});
 
 	}
