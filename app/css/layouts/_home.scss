@@ -216,6 +216,12 @@
 					}
 				}
 			}
+			.viewport{
+				aside.text{
+					height: 37.5vw;
+					max-height: 37.5vw;
+				}
+			}
 			a.cfa{
 				@include Item(279, 58, 550, 0, 0, 0, 570, 'fit', 'absolute');
 				@media screen and (max-width: #{$screen-xs - 1}) {
@@ -311,10 +317,11 @@
 			}
 		}
 		aside.text{
-			max-height: 330px;
+			max-height: 50em;
+			max-height: 30vw;
+			height: 100em;
 			overflow: auto;
 			width: auto;
-			height: 500px;
 			img{
 				position: relative;
 			}
