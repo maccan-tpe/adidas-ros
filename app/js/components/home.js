@@ -9,9 +9,10 @@ app.partial.home = function(){
 	var container = $('#container');
 	container.on('page:update:home' , function(page, menu){
 		// $('.parallax').parallax();
-		$('.parallax').each(function(idx, ele){
+		
+		/*$('.parallax').each(function(idx, ele){
 			var parallax = new Parallax(ele);
-		});
+		});*/
 		
 		var fullpageSections = ['kv', 'lin', 'chen', 'lu'];
 		$('#content').on('resizeend', 500, function(e){
