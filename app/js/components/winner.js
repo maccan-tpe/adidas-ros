@@ -5,11 +5,11 @@
 	key-spacing ,curly, no-shadow, no-return-assign, no-redeclare, no-unused-vars,
 	eqeqeq, no-extend-native, quotes , no-inner-declarations*/
 /*global app, $, anime */
-app.partial.reward = function(){
+app.partial.winner = function(){
 
 
 	var container = $('#container');
-	container.on('page:update:reward' , function(page, menu){
+	container.on('page:update:winner' , function(page, menu){
 		$('#content').on('resizeend', 500, function(e){
 			e.stopPropagation();
 			e.preventDefault();
@@ -27,17 +27,17 @@ app.partial.reward = function(){
 				easing: 'easeInOutExpo'
 			});
 			if($(window).width() > 800){
-				$('.reward article .text').mCustomScrollbar({
+				$('.winner article .text').mCustomScrollbar({
 					autoDraggerLength: false
 				});
 			}else{			
-				$('.reward article .text').mCustomScrollbar('destroy');
+				$('.winner article .text').mCustomScrollbar('destroy');
 			}
 		});
 	});
 
-	if($('#content.reward').length){
-		$('#container').trigger('page:update:reward', null);
+	if($('#content.winner').length){
+		$('#container').trigger('page:update:winner', null);
 	}
 
 };
