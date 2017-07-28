@@ -26,11 +26,11 @@ app.partial.ga = function(){
 		$('#container').on('page:update:home', function(){
 			ga('send', 'pageview', { 'page': 'Mobile_index', 'title': 'Mobile_index'});
 		});
-		$('#container').on('page:update:home', function(){
+		$('#container').on('page:update:list', function(){
 			ga('send', 'pageview', { 'page': 'Mobile_list', 'title': 'Mobile_list'});
 		});
-		$('#container').on('page:update:home', function(){
-			ga('send', 'pageview', { 'page': 'Mobile_list', 'title': 'Mobile_list'});
+		$('#container').on('page:update:winner', function(){
+			ga('send', 'pageview', { 'page': 'Mobile_winner', 'title': 'Mobile_winner'});
 		});
 	}else{
 		$('[data-ga]').on('click', function(e){
