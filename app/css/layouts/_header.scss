@@ -83,31 +83,37 @@ header {
 				}
 				&:nth-child(1){
 					left: per(80, 750);
-					top: per(120, 950);
+					top: per(90, 950);
 					width: per(291, 750);
 					padding-top: per(70, 750);
 				}
 				&:nth-child(2){
 					left: per(80, 750);
-					top: per(260, 950);
+					top: per(220, 950);
 					width: per(291, 750);
 					padding-top: per(142, 750);
 				}
 				&:nth-child(3){
 					left: per(80, 750);
-					top: per(400, 950);
+					top: per(340, 950);
 					width: per(409, 750);
 					padding-top: per(142, 750);
 				}
 				&:nth-child(4){
 					left: per(80, 750);
-					top: per(590, 950);
+					top: per(510, 950);
 					width: per(290, 750);
 					padding-top: per(70, 750);
 				}
 				&:nth-child(5){
 					left: per(80, 750);
-					top: per(730, 950);
+					top: per(630, 950);
+					width: per(290, 750);
+					padding-top: per(70, 750);
+				}
+				&:nth-child(6){
+					left: per(80, 750);
+					top: per(750, 950);
 					width: per(290, 750);
 					padding-top: per(70, 750);
 				}

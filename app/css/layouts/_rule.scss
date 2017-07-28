@@ -1,4 +1,4 @@
-.rule, .list{
+.rule, .list, .reward{
 	@include SubItem();
 	@media screen and (max-width: #{$screen-xs - 1}) {
 		position: relative;
