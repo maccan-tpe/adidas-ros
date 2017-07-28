@@ -11,8 +11,7 @@
     "jquery.resizeend": "^0.2.1",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
     "font-awesome": "^4.7.0",
-    "bootstrap-formhelpers": "^2.3.0",
-    "better-dateinput-polyfill": "^2.0.2"
+    "bootstrap-formhelpers": "^2.3.0"
   },
   "overrides": {
     "bootstrap-sass": {
